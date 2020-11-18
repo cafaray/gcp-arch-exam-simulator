@@ -1,0 +1,104 @@
+Your team has deployed a VPC with default subnets in all regions. The lead network architect at your company is concerned about possible overlap in the use of private addresses. How would you explain how you are dealing with the potential problem?
+A. You inform the network architect that you are not using private addresses at all.
+B. When default subnets are created for a VPC, each region is assigned a different IP address range.
+C. You have increased the size of the subnet mask in the CIDR block specification of the set of IP addresses.
+D. You agree to assign new IP address ranges on all subnets.
+1. B. The correct answer is B. Default subnets are each assigned a distinct, nonoverlapping IP address range. Option A is incorrect, as default subnets use private addresses. Option C is incorrect because increasing the size of the subnet mask does not necessarily prevent overlaps. Option D is an option that would also ensure nonoverlapping addresses, but it is not necessary given the stated requirements.
+
+A data warehouse service running in GCP has all of its resources in a single project. The e-commerce application has resources in another project, including a database with transaction data that will be loaded into the data warehouse. The data warehousing team would like to read data directly from the database using extraction, transformation, and load processes that run on Compute Engine instances in the data warehouse project. Which of the following network constructs could help with this?
+A. Shared VPC
+B. Regional load balancing
+C. Direct peering
+D. Cloud VPN
+2. A. The correct answer is A. A Shared VPC allows resources in one project to access the resources in another project. Option B is incorrect, as load balancing does not help with network access. Options C and D are incorrect because those are mechanisms for hybrid cloud computing. In this case, all resources are in GCP, so hybrid networking is not needed.
+
+An intern working with your team has changed some firewall rules. Prior to the change, all Compute Engine instances on the network could connect to all other instances on the network. After the change, some nodes cannot reach other nodes. What might have been the change that causes this behavior?
+A. One or more implied rules were deleted.
+B. The default-allow-internal rule was deleted.
+C. The default-all-icmp rule was deleted.
+D. The priority of a rule was set higher than 65535.
+3. B. The correct answer is B. The default-allow-internal rule allows ingress connections for all protocols and ports among instances in the network. Option A is incorrect because implied rules cannot be deleted, and the implied rules alone would not be enough to enable all instances to connect to all other instances. Option C is incorrect because that rule governs the ICMP protocol for management services, like ping. Option D is incorrect because 65535 is the largest number/lowest priority allowed for firewall rules.
+
+The network administrator at your company has asked that you configure a firewall rule that will always take precedence over any other firewall rule. What priority would you assign?
+A. 0
+B. 1
+C. 65534
+D. 65535
+4. A. The correct answer is A. 0 is the highest priority for firewall rules. All the other options are incorrect because they have priorities that are not guaranteed to enable the rule to take precedence.
+
+During a review of a GCP network configuration, a developer asks you to explain CIDR notation. Specifically, what does the 8 mean in the CIDR block 172.16.10.2/8?
+A. 8 is the number of bits used to specify a host address.
+B. 8 is the number of bits used to specify the subnet mask.
+C. 8 is the number of octets used to specify a host address.
+D. 8 is the number of octets used to specify the subnet mask.
+5. B. The correct answer is B. 8 is the number of bits used to specify the subnet mask. Option A is wrong because 24 is the number of bits available to specify a host address. Options C and D are wrong, as the integer does not indicate an octet.
+
+Several new firewall rules have been added to a VPC. Several users are reporting unusual problems with applications that did not occur before the firewall rule changes. You’d like to debug the firewall rules while causing the least impact on the network and doing so as quickly as possible. Which of the following options is best?
+A. Set all new firewall priorities to 0 so that they all take precedence over other rules.
+B. Set all new firewall priorities to 65535 so that all other rules take precedence over these rules.
+C. Disable one rule at a time to see whether that eliminates the problems. If needed, disable combinations of rules until the problems are eliminated.
+D. Remove all firewall rules and add them back one at a time until the problems occur and then remove the latest rule added back.
+6. C. The correct answer is C. Disabling a firewall rule allows you to turn off the effect of a rule quickly without deleting it. Option A is incorrect because it does not help isolate the rule or rules causing the problem, and it may introduce new problems because the new rules may take precedence in cases they did not before. Option B is not helpful because alone it would not help isolate the problematic rule or rules. Option D is incorrect because it will leave the VPC with only implied rules. Adding back all rules could be time-consuming, and having no rules could cause additional problems.
+
+An executive wants to understand what changes in the current cloud architecture are required to run compute-intensive machine learning workloads in the cloud and have the models run in production using on-premises servers. The models are updated daily. There is no network connectivity between the cloud and on-premises networks. What would you tell the executive?
+A. Implement additional firewall rules
+B. Use global load balancing
+C. Use hybrid-cloud networking
+D. Use regional load balancing
+7. C. The correct answer is C. Hybrid networking is needed to enable the transfer of data to the cloud to build models and then transfer models back to the on-premises servers. Option A is incorrect because firewall rules restrict or allow traffic on a network—they do not link networks. Options B and D are incorrect because load balancing does not link networks.
+
+To comply with regulations, you need to deploy a disaster recovery site that has the same design and configuration as your production environment. You want to implement the disaster recovery site in the cloud. Which topology would you use?
+A. Gated ingress topology
+B. Gated egress topology
+C. Handover topology
+D. Mirrored topology
+8. D. The correct answer is D. With mirrored topology, public cloud and private on-premise environments mirror each other. Options A and B are not correct because gated topologies are used to allow access to APIs in other networks without exposing them to the public Internet. Option C is incorrect because that topology is used to exchange data and have different processing done in different environments.
+
+Network engineers have determined that the best option for linking the on-premises network to GCP resources is by using an IPsec VPN. Which GCP service would you use in the cloud?
+A. Cloud IPsec
+B. Cloud VPN
+C. Cloud Interconnect IPsec
+D. Cloud VPN IKE
+9. B. The correct answer is B. Cloud VPN implements IPsec VPNs. All other options are incorrect because they are not names of actual services available in GCP.
+
+Network engineers have determined that a link between the on-premises network and GCP will require an 8 Gbps connection. Which option would you recommend?
+A. Cloud VPN
+B. Partner Interconnect
+C. Direct Interconnect
+D. Hybrid Interconnect
+10. B. The correct answer is B. Partner Interconnect provides between 50 Mbps and 10 Gbps connections. Option A, Cloud VPN, provides up to 3 Gbps connections. Option C, Direct Interconnect, provides 10 or 100 Gbps connections. Option D is not an actual GCP service name.
+
+Network engineers have determined that a link between the on-premises network and GCP will require a connection between 60 Gbps and 80 Gbps. Which hybrid-cloud networking services would best meet this requirement?
+A. Cloud VPN
+B. Cloud VPN and Direct Interconnect
+C. Direct Interconnect and Partner Interconnect
+D. Cloud VPN, Direct Interconnect, and Partner Interconnect
+11. C. The correct answer is C. Both direct interconnect and partner interconnect can be configured to support between 60 Gbps and 80 Gbps. All other options are wrong because Cloud VPN supports a maximum of 3 Gbps.
+
+The director of network engineering has determined that any links to networks outside of the company data center will be implemented at the level of BGP routing exchanges. What hybrid-cloud networking option should you use?
+A. Direct peering
+B. Indirect peering
+C. Global load balancing
+D. Cloud IKE
+12. A. The correct answer is A. Direct peering allows customers to connect their networks to a Google network point of access and exchange Border Gateway Protocol (BGP) routes, which define paths for transmitting data between networks. Options B and D are not the names of GCP services. Option C is not correct because global load balancing does not link networks.
+
+A startup is designing a social site dedicated to discussing global political, social, and environmental issues. The site will include news and opinion pieces in text and video. The startup expects that some stories will be exceedingly popular, and others won’t be, but they want to ensure that all users have a similar experience with regard to latency, so they plan to replicate content across regions. What load balancer should they use?
+A. HTTP(S)
+B. SSL Proxy
+C. Internal TCP/UDP
+D. TCP Proxy
+13. A. The correct answer is A. HTTP(S) load balancers are global and will route HTTP traffic to the region closest to the user making a request. Option B is incorrect, as SSL Proxy is used for non-HTTPS SSL traffic. Option C is incorrect because it does not support external traffic from the public Internet. Option D is incorrect, as TCP Proxy is used for non-HTTP(S) traffic.
+
+As a developer, you foresee the need to have a load balancer that can distribute load using only private RFC 1918 addresses. Which load balancer would you use?
+A. Internal TCP/UDP
+B. HTTP(S)
+C. SSL Proxy
+D. TCP Proxy
+14. A. The correct answer is A. Only Internal TCP/UDP supports load balancing using private IP addressing. The other options are all incorrect because they cannot load balance using private IP addresses.
+
+After a thorough review of the options, a team of developers and network engineers have determined that the SSL Proxy load balancer is the best option for their needs. What other GCP service must they have to use the SSL Proxy load balancer?
+A. Cloud Storage
+B. Cloud VPN
+C. Premium Tier networking
+D. TCP Proxy Load Balancing
+15. C. The correct answer is C. All global load balancers require the Premium Tier network, which routes all data over the Google global network and not the public Internet. Option A is incorrect, as object storage is not needed. Option C is incorrect because a VPN is not required. Option D is incorrect, as that is another kind of global load balancer that would require Premium Tier networking.

@@ -1,0 +1,118 @@
+You need to store a set of files for an extended period of time. Anytime the data in the files needs to be accessed, it will be copied to a server first, and then the data will be accessed. Files will not be accessed more than once a year. The set of files will all have the same access controls. What storage solution would you use to store these files?
+A. Cloud Storage Coldline
+B. Cloud Storage Nearline
+C. Cloud Filestore
+D. Bigtable
+1. A. The correct answer is A. The Cloud Storage Coldline service is designed for long-term storage of infrequently accessed objects. Option B is not the best answer because Nearline should be used with objects that are not accessed up to once a month. Coldline storage is more cost effective and still meets the requirements. Option C is incorrect. Cloud Filestore is a network filesystem, and it is used to store data that is actively used by applications running on Compute Engine VM and Kubernetes Engine clusters.
+
+You are uploading files in parallel to Cloud Storage and want to optimize load performance. What could you do to avoid creating hotspots when writing files to Cloud Storage?
+A. Use sequential names or timestamps for files.
+B. Do not use sequential names or timestamps for files.
+C. Configure retention policies to ensure that files are not deleted prematurely.
+D. Configure lifecycle policies to ensure that files are always using the most appropriate storage class.
+2. B. The correct answer is B. Do not use sequential names or timestamps if uploading files in parallel. Files with sequentially close names will likely be assigned to the same server. This can create a hotspot when writing files to Cloud Storage. Option A is incorrect, as this could cause hotspots. Options C and D affect the lifecycle of files once they are written and do not impact upload efficiency.
+
+As a consultant on a cloud migration project, you have been asked to recommend a strategy for storing files that must be highly available even in the event of a regional failure. What would you recommend?
+A. BigQuery
+B. Cloud Datastore
+C. Multiregional Cloud Storage
+D. Regional Cloud Storage
+3. C. The correct answer is C. Multiregional Cloud Storage replicates data to multiple regions. In the event of a failure in one region, the data could be retrieved from another region. Options A and B are incorrect because those are databases, not file storage systems. Option D is incorrect because it does not meet the requirement of providing availability in the event of a single region failure.
+
+As part of a migration to Google Cloud Platform, your department will run a collaboration and document management application on Compute Engine virtual machines. The application requires a filesystem that can be mounted using operating system commands. All documents should be accessible from any instance. What storage solution would you recommend?
+A. Cloud Storage
+B. Cloud Filestore
+C. A document database
+D. A relational database
+4. B. The correct answer is B. Cloud Filestore is a network-attached storage service that provides a filesystem that is accessible from Compute Engine. Filesystems in Cloud Filestore can be mounted using standard operating system commands. Option A, Cloud Storage, is incorrect because it does not provide a filesystem. Options C and D are incorrect because databases do not provide filesystems.
+
+Your team currently supports seven MySQL databases for transaction processing applications. Management wants to reduce the amount of staff time spent on database administration. What GCP service would you recommend to help reduce the database administration load on your teams?
+A. Bigtable
+B. BigQuery
+C. Cloud SQL
+D. Cloud Filestore
+5. C. The correct answer is C. Cloud SQL is a managed database service that supports MySQL and PostgreSQL. Option A is incorrect because Bigtable is a wide-column NoSQL database, and it is not a suitable substitute for MySQL. Option B is incorrect because BigQuery is optimized for data warehouse and analytic databases, not transactional databases. Option D is incorrect, as Cloud Filestore is not a database.
+
+Your company is developing a new service that will have a global customer base. The service will generate large volumes of structured data and require the support of a transaction processing database. All users, regardless of where they are on the globe, must have a consistent view of data. What storage system will meet these requirements?
+A. Cloud Spanner
+B. Cloud SQL
+C. Cloud Storage
+D. BigQuery
+6. A. The correct answer is A. Cloud Spanner is a managed database service that supports horizontal scalability across regions. It supports strong consistency so that there is no risk of data anomalies caused by eventual consistency. Option B is incorrect because Cloud SQL cannot scale globally. Option C is incorrect, as Cloud Storage does not meet the database requirements. Option D is incorrect because BigQuery is not designed for transaction processing systems.
+
+Your company is required to comply with several government and industry regulations, which include encrypting data at rest. What GCP storage services can be used for applications subject to these regulations?
+A. Bigtable and BigQuery only
+B. Bigtable and Cloud Storage only
+C. Any of the managed databases, but no other storage services
+D. Any GCP storage service
+7. D. The correct answer is D. All data in GCP is encrypted when at rest. The other options are incorrect because they do not include all GCP storage services.
+
+As part of your role as a data warehouse administrator, you occasionally need to export data from the data warehouse, which is implemented in BigQuery. What command-line tool would you use for that task?
+A. gsutil
+B. gcloud
+C. bq
+D. cbt
+8. C. The correct answer is C. The bq command-line tool is used to work with BigQuery. Option A, gsutil, is the command-line tool for working with Cloud Storage, and Option D, cbt, is the command-line tool for working with Bigtable. Option B, gcloud, is the command-line tool for most other GCP services.
+
+Another task that you perform as data warehouse administrator is granting authorizations to perform tasks with the BigQuery data warehouse. A user has requested permission to view table data but not change it. What role would you grant to this user to provide the needed permissions but nothing more?
+A. dataViewer
+B. admin
+C. metadataViewer
+D. dataOwner
+9. A. The correct answer is A. dataViewer allows a user to list projects and tables and get table data and metadata. Options B and D would enable the user to view data but would grant more permissions than needed. Option C does not grant permission to view data in tables.
+
+A developer is creating a set of reports and is trying to minimize the amount of data each query returns while still meeting all requirements. What bq command-line option will help you understand the amount of data returned by a query without actually executing the query?
+A. --no-data
+B. --estimate-size
+C. --dry-run
+D. -- size
+10. C. The correct answer is C. --dry-run returns an estimate of the number of bytes that would be returned if the query were executed. The other choices are not actually bq command-line options.
+
+A team of developers is choosing between using NoSQL or a relational database. What is a feature of NoSQL databases that is not available in relational databases?
+A. Fixed schemas
+B. ACID transactions
+C. Indexes
+D. Flexible schemas
+11. D. The correct answer is D. NoSQL data has flexible schemas. The other options specify features that are found in relational databases. ACID transactions and indexes are found in some NoSQL databases as well.
+
+A group of venture capital investors have hired you to review the technical design of a service that will be developed by a startup company seeking funding. The startup plans to collect data from sensors attached to vehicles. The data will be used to predict when a vehicle needs maintenance and before the vehicle breaks down. Thirty sensors will be on each vehicle. Each sensor will send up to 5K of data every second. The startup expects to start with hundreds of vehicles, but it plans to reach 1 million vehicles globally within 18 months. The data will be used to develop machine learning models to predict the need for maintenance. The startup is planning to use a self-managed relational database to store the time-series data. What would you recommend for a time-series database?
+A. Continue to plan to use a self-managed relational database.
+B. Use a Cloud SQL.
+C. Use Cloud Spanner.
+D. Use Bigtable.
+12. D. The correct answer is D. Bigtable is the best option for storing streaming data because it provides low-latency writes and can store petabytes of data. The database would need to store petabytes of data if the number of users scales as planned. Option A is a poor choice because a managed database would meet requirements and require less administration support. Option B will not scale to the volume of data expected. Option C, Cloud Spanner, could scale to store the volumes of data, but it is not optimized for low-latency writes of streaming data.
+
+A Bigtable instance increasingly needs to support simultaneous read and write operations. You’d like to separate the workload so that some nodes respond to read requests and others respond to write requests. How would you implement this to minimize the workload on developers and database administrators?
+A. Create two instances, and separate the workload at the application level.
+B. Create multiple clusters in the Bigtable instance, and use Bigtable replication to keep the clusters synchronized.
+C. Create multiple clusters in the Bigtable instance, and use your own replication program to keep the clusters synchronized.
+D. It is not possible to accomplish the partitioning of the workload as described.
+13. B. The correct answer is B—create multiple clusters in the instance and use Bigtable replication. Options A and C are not correct, as they require developing custom applications to partition data or keep replicas synchronized. Option D is incorrect because the requirements can be met.
+
+As a database architect, you’ve been asked to recommend a database service to support an application that will make extensive use of JSON documents. What would you recommend to minimize database administration overhead while minimizing the work required for developers to store JSON data in the database?
+A. Cloud Storage
+B. Cloud Datastore
+C. Cloud Spanner
+D. Cloud SQL
+14. B. The correct answer is B. Cloud Datastore is a managed document database, which is a kind of NoSQL database that uses a flexible JSON-like data structure. Option A is incorrect—it is not a database. Options C and D are not good fits because the JSON data would have to be mapped to relational structures to take advantage of the full range of relational features. There is no indication that additional relational features are required.
+
+Your Cloud SQL database is close to maximizing the number of read operations that it can perform. You could vertically scale the database to use a larger instance, but you do not need additional write capacity. What else could you try to reduce the number of reads performed by the database?
+A. Switch to Cloud Spanner.
+B. Use Cloud Bigtable instead.
+C. Use Cloud Memorystore to create a database cache that stores the results of database queries. Before a query is sent to the database, the cache is checked for the answer to the query.
+D. There is no other option—you must vertically scale.
+15. C. The correct answer is C. You could try to cache results to reduce the number of reads on the database. Option A is not a good choice because it does not reduce the number of reads, and there is no indication that the scale of Cloud Spanner is needed. Option B is not a good choice because Bigtable is a NoSQL database and may not meet the database needs of the application. Option D is incorrect because caching is an option.
+
+You would like to move objects stored in Cloud Storage automatically from regional storage to Nearline storage when the object is 6 months old. What feature of Cloud Storage would you use?
+A. Retention policies
+B. Lifecycle policies
+C. Bucket locks
+D. Multiregion replication
+16. B. Option B is correct. Lifecycle policies allow you to specify an action, like changing storage class, after an object reaches a specified age. Option A is incorrect, as retention policies prevent premature deleting of an object. Option C is incorrect. This is a feature used to implement retention policies.
+
+A customer has asked for help with a web application. Static data served from a data center in Chicago in the United States loads slowly for users located in Australia, South Africa, and Southeast Asia. What would you recommend to reduce latency?
+A. Distribute data using Cloud CDN.
+B. Use Premium Network from the server in Chicago to client devices.
+C. Scale up the size of the web server.
+D. Move the server to a location closer to users.
+17. A. The correct answer is A. Cloud CDN distributes copies of static data to points of presence around the globe so that it can be closer to users. Option B is incorrect. Premium Network routes data over the internal Google network, but it does not extend to client devices. Option C will not help with latency. Option D is incorrect because moving the location of the server might reduce the latency for some users, but it would likely increase latency for other users, as they could be located anywhere around the globe.

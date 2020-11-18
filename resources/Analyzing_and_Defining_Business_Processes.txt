@@ -1,0 +1,104 @@
+You have been asked to help with a new project kickoff. The project manager has invited engineers and managers from teams directly working on the project. They have also invited members of teams that might use the service to be built by the project. What is the motivation of the project manager for inviting these various participants?
+A. To communicate with stakeholders
+B. To meet compliance requirements
+C. To practice good cost control measures
+D. To solicit advice on building team skills
+1. A. The correct answer is A. Each of the individuals invited to the meeting have an interest in the project. Option B is incorrect since there is no mention of compliance requirements and regulations do not typically dictate meeting structures. Options C and D are incorrect, as there is no discussion of cost or skill building.
+
+A junior engineer asks you to explain some terms often used in meetings. In particular, the engineer wants to know the difference between a project and a program. How would you explain the difference?
+A. There is no difference; the two terms are used interchangeably.
+B. A project is part of a program, and programs span multiple departments; both exist to execute organizational strategy.
+C. A program is part of a project, and projects span multiple departments; both exist to execute organizational strategy.
+D. A project is used only to describe software development efforts, while a program can refer to any company initiative.
+2. B. Option B is correct. A project is part of a program, and programs span multiple departments; both exist to execute organizational strategy. Option A is incorrect because the words do mean different things. Option C is incorrect because programs are not part of projects. Option D is incorrect because projects do not refer only to software engineering efforts.
+
+An architect writes a post for an internal blog describing the pros and cons of two approaches to improving the reliability of a widely used service. This is an example of what stage of stakeholder management?
+A. Identifying stakeholders
+B. Determining their roles and scope of interests
+C. Developing a communications plan
+D. Communicating with and influencing stakeholders
+3. D. The correct answer is D. This is an example of communicating with stakeholders and influencing their opinions about options. Option A is incorrect, as the stakeholders are not identified here. Option B is incorrect because there is no discussion of individuals’ roles and scope of interest. Option C is incorrect because the architect did not publish a plan.
+
+Your company provides a SaaS product used by mobile app developers to capture and analyze log messages from mobile devices in real time. Another company begins to offer a similar service but includes alerting based on metrics as well as log messages. This prompts the executives to change strategy from developing additional log analysis features to developing alerting features. This is an example of a change prompted by which one of the following?
+A. Individual choice
+B. Competition
+C. Skills gap
+D. Unexpected economic factors
+4. B. The correct answer is B. This is a change because of the introduction of a competitive product with more features. Option A is incorrect. This is not a change prompted by the actions of an individual, such as someone leaving the company. Option C is incorrect because a skills gap did not trigger the change, although there may be a skills gap on the team that now has to implement alerting. Option D is incorrect. There is no mention of economic factors, such as a recession.
+
+In May 2018, the EU began enforcement of a new privacy regulation known as the GDPR. This required many companies to change how they manage personal information about citizens of the EU. This is an example of what kind of change?
+A. Individual choice
+B. Competition
+C. Skills gap
+D. Regulation
+5. D. The correct answer is D. The changes were prompted by a new regulation. Option A is incorrect. This is not a change prompted by the actions of an individual, such as someone leaving the company. Option B is incorrect, as there is no mention of competitive pressures. Option C is incorrect. A skills gap did not trigger the change, although there may be a skills gap on the team that now has to implement alerting.
+
+A program manager asks for your advice on managing change in projects. The program manager is concerned that there are multiple changes underway simultaneously, and it is difficult to understand the impact of these changes. What would you suggest as an approach to managing this change?
+A. Stop making changes until the program manager can understand their potential impacts.
+B. Communicate more frequently with stakeholders.
+C. Implement a Plan-Do-Study-Act methodology.
+D. Implement cost control measures to limit the impact of simultaneous changes.
+6. C. The correct option is C. The program manager should use a change management methodology to control and better understand changes. Option A is incorrect. A program manager may not be able to stop some changes, such as changes due to regulatory changes, without adverse consequences. Option B is incorrect because it does not solve the problem presented but may be part of a solution that includes using a change management strategy. Option D is incorrect, as cost controls will not help the program manager understand the impact of changes.
+
+A company for whom you consult is concerned about the potential for startups to disrupt its industry. The company has asked for your help implementing new services using IoT, cloud computing, and AI. There is a high risk that this initiative will fail. This is an example of which one of the following?
+A. Typical change management issues
+B. A digital transformation initiative
+C. A project in response to a competitor’s product
+D. A cost management initiative
+7. B. The correct answer is B. This is an example of a digital transformation initiative that is attempting fundamental changes in the way that the company delivers value to its customers. Option A is incorrect. This is not a typical change management issue because it involves the entire enterprise introducing multiple new technologies. Option C is incorrect. The scope of this initiative is in response to more than a single competitor. Option D is incorrect. This is not a cost management initiative.
+
+You and another architect in your company are evaluating the skills possessed by members of several software development teams. This exercise was prompted by a new program to expand the ways that customers can interact with the company. This will require a significant amount of mobile development. This kind of evaluation is an example of which part of team skill management?
+A. Defining skills needed to execute programs and projects defined by organizational strategy
+B. Identifying skill gaps on a team or in an organization
+C. Working with managers to develop plans to develop skills of individual contributors
+D. Helping recruit and retain people with the skills needed by the team
+8. B. The correct answer is B. This exercise is an attempt to identify a skills gap—in this case mobile development skills. Option A is incorrect. This is not about defining skills needed, as that has already been done. Option C is incorrect because it is premature to develop a plan until the gaps are understood. Option D is incorrect because there is no mention of hiring additional engineers.
+
+You and an engineering manager in your company are creating a schedule of training courses for engineers to learn mobile development skills. This kind of planning is an example of which part of team skill management?
+A. Defining skills needed to execute programs and projects defined by organizational strategy
+B. Identifying skill gaps on a team or in an organization
+C. Working with managers to develop plans to develop skills of individual contributors
+D. Helping recruit and retain people with the skills needed by the team
+9. C. The correct answer is C. This is an example of developing the skills of individual contributors. Option A is incorrect. This is not about defining skills needed. Option B is incorrect. This is not about identifying skills gaps, as that has already been done. Option D is incorrect because it does not entail recruiting.
+
+After training engineers on the latest mobile development tools and techniques, managers determine that the teams do not have a sufficient number of engineers to complete software development projects in the time planned. The managers ask for your assistance in writing job advertisements reaching out to your social network. These activities are an example of which part of team skill management?
+A. Defining skills needed to execute programs and projects defined by organization strategy
+B. Identifying skill gaps on a team or in an organization
+C. Working with managers to develop plans to develop skills of individual contributors
+D. Helping recruit and retain people with the skills needed by the team
+10. D. The correct answer is D. This is an example of recruiting. Option A is incorrect, as this is not about defining skills needed. Option B is incorrect. This is not about identifying skills gaps, as that has already been done. Option C is incorrect because it does not entail planning training and skill development.
+
+A team of consultants from your company is working with a customer to deploy a new offering that uses several services that your company provides. They are making design decisions about how to implement authentication and authorization and want to discuss options with an architect. This is an example of which aspect of customer success management?
+A. Customer acquisition
+B. Marketing and sales
+C. Professional services
+D. Training and support
+11. C. The correct answer is C. This is an example of professional services because it involves custom support and development for customers. Option A is incorrect because the customer is already acquired. Option B is incorrect because there is no marketing or sales involved. Option D is incorrect because this is a consulting engagement and not a training activity.
+
+Customers are noticing delays in receiving messages from an alerting service that your company provides. They call your company and provide details that are logged into a central database and reviewed by engineers who are troubleshooting the problem. This is an example of which aspect of customer success management?
+A. Customer acquisition
+B. Marketing and sales
+C. Professional services
+D. Training and support
+12. D. The correct answer is D. This is an example of training and support because those are support activities. Option A is incorrect because the customer is already acquired. Option B is incorrect because there is no marketing or sales involved. Option C is incorrect because this is not a consulting engagement.
+
+As an architect, you have been invited to attend a trade conference in your field of expertise. In addition to presenting at the conference, you will spend time at your company’s booth in the exhibit hall, where you will discuss your company’s products with conference attendees. This is an example of what aspect of customer success management?
+A. Customer acquisition
+B. Marketing and sales
+C. Professional services
+D. Training and support
+13. A. The correct answer is A. This is an example of acquiring customers. Option B is incorrect because there is no marketing or sales involved. Option C is incorrect because this is not a consulting engagement. Option D is incorrect because this does not involve training and support activities.
+
+A group of executives has invited you to a meeting to represent architects in a discussion about identifying projects and programs that require funding and prioritizing those efforts based on the company’s strategy and needs. This is an example of what aspect of cost management?
+A. Resource planning
+B. Cost estimating
+C. Cost budgeting
+D. Cost control
+14. A. The correct answer is A. This is an example of resource planning because it involves prioritizing projects and programs. Options B and C are incorrect because there is no cost estimating or budgeting done in the meeting. Option D is incorrect because it does not involve expenditure approvals or reporting.
+
+An engineer has been tasked with creating reports to help managers track spending. This is an example of what aspect of cost management?
+A. Resource planning
+B. Cost estimating
+C. Cost budgeting
+D. Cost control
+15. D. The correct answer is D. This effort involves reporting on expenditures. Option A is incorrect because there is no review of proposed projects or discussion of priorities. Options B and C are incorrect because there is no cost estimating or budgeting done in the meeting.

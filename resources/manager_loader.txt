@@ -1,0 +1,13 @@
+Assessment Test,Assessment_Test.txt
+Designing and planning a cloud solution architecture,Designing_planning_a_cloud_solution.txt
+Designing for Business Requirements,Designing_for_Business_Requirements.txt
+Designing for Technical Requirements,Designing_for_Technical_Requirements.txt
+Designing Compute Systems,Designing_Compute_Systems.txt
+Designing Storage Systems,Designing_Storage_Systems.txt
+Designing Networks,Designing_Networks.txt
+Designing for Security and Legal Compliance,Security_and_Legal_Compliance.txt
+Designing for Reliability,Designing_for_Reliability.txt
+Analyzing and Defining Technical Processes,Analyzing_and_Defining_Technical_Processes.txt
+Analyzing and Defining Business Processes,Analyzing_and_Defining_Business_Processes.txt
+Development and Operations,Development_and_Operations.txt
+Migration Planning,Migration_Planning.txt

@@ -1,0 +1,133 @@
+In the Dress4Win case study, the volume of data and compute load will grow with respect to what factor?
+A. The number of customers, designers, and retailers
+B. The time the application is running
+C. The type of storage used
+D. Compliance with regulations
+1. A. Option A is correct. Dress4Win is a consumer, e-commerce service that will grow with respect to the number of customers. Also, the number of designers and retailers will influence the growth in demand for compute and storage resources. Option B is incorrect because the length of run time is not relevant to compute or storage requirements. The type of storage used does not influence the amount of data the application needs to manage, or the amount of computing resources needed. Compliance and regulations may have some effect on security controls and monitoring, but it will not influence compute and storage resources in a significant way.
+
+You have received complaints from customers about long wait times while loading application pages in their browsers, especially pages with several images. Your director has tasked you with reducing latency when accessing and transmitting data to a client device outside the cloud. Which of the following would you use? (Choose two.)
+A. Multiregional storage
+B. Coldline storage
+C. CDN
+D. Cloud Pub/Sub
+E. Cloud Dataflow
+2. A, C. Options A and C are correct. Both multiregional cloud storage and CDNs distribute data across a geographic area. Option B is incorrect because Coldline storage is used for archiving. Option D is incorrect because Cloud Pub/Sub is a messaging queue, not a storage system. Option E is a managed service for batch and stream processing.
+
+Mountkirk Games will analyze game players’ usage patterns. This will require collecting time-series data including game state. What database would be a good option for doing this?
+A. BigQuery
+B. Bigtable
+C. Cloud Spanner
+D. Cloud Storage
+3. B. Option B is correct. High volumes of time-series data need low-latency writes and scalable storage. Time-series data is not updated after it is collected. This makes Bigtable, a wide-column data store with low-latency writes, the best option. Option A is wrong because BigQuery is an analytic database designed for data warehousing. Option C is wrong because Cloud Spanner is a global relational database. Write times would not be as fast as they would be using Bigtable, and the use case does not take advantage of Cloud Spanner’s strong consistency in a horizontally scalable relational database. Option D is not a good option because it is an object store, and it is not designed for large volumes of individual time-series data points.
+
+You have been hired to consult with a new data warehouse team. They are struggling to meet schedules because they repeatedly find problems with data quality and have to write preprocessing scripts to clean the data. What managed service would you recommend for addressing these problems?
+A. Cloud Dataflow
+B. Cloud Dataproc
+C. Cloud Dataprep
+D. Cloud Datastore
+4. A. Option A is correct. Cloud Dataflow is a batch and stream processing service that can be used for transforming data before it is loaded into a data warehouse. Option C is incorrect, Cloud Dataprep is used to prepare data for analysis and machine learning. Option B, Cloud Dataproc, is a managed Hadoop and Spark service, not a data cleaning and preparing service. Option D, Cloud Datastore, is a document database, not a data processing service.
+
+You have deployed an application that receives data from sensors on TerramEarth equipment. Sometimes more data arrives than can be processed by the current set of Compute Engine instances. Business managers do not want to run additional VMs. What changes could you make to ensure that data is not lost because it cannot be processed as it is sent from the equipment? Assume that business managers want the lowest-cost solution.
+A. Write data to local SSDs on the Compute Engine VMs.
+B. Write data to Cloud Memorystore, and have the application read data from the cache.
+C. Write data from the equipment to a Cloud Pub/Sub queue, and have the application read data from the queue.
+D. Tune the application to run faster.
+5. C. The correct answer is C, write data to a Cloud Pub/Sub topic. The data can accumulate there as the application processes the data. No data is lost because Pub/Sub will scale as needed. Option A is not a good option because local storage does not scale. Option B is not a good choice because caches are used to provide low-latency access to data that is frequently accessed. Cloud Memorystore does not scale as well as Cloud Pub/Sub, and it may run out of space. Option D is not a good choice because tuning will require developers to invest potentially significant amounts of time without any guarantee of solving the problem. Also, even with optimizations, even larger spikes in data ingestion could result in the same problem of the processing application not being able to keep up with the rate at which data is arriving.
+
+Your company uses Apache Spark for data science applications. Your manager has asked you to investigate running Spark in the cloud. Your manager’s goal is to lower the overall cost of running and managing Spark. What would you recommend?
+A. Run Apache Spark in Compute Engine.
+B. Use Cloud Dataproc with preemptible virtual machines.
+C. Use Cloud Dataflow with preemptible virtual machines.
+D. Use Cloud Memorystore with Apache Spark running in Compute Engine.
+6. B. Option B is correct. Using Cloud Dataproc will reduce the costs of managing the Spark cluster, while using preemptible VMs will reduce the compute charges. Option A is not the best option because you will have to manage the Spark cluster yourself, which will increase the total cost of ownership. Option C is incorrect as Cloud Dataflow is not a managed Spark service. Option D is incorrect because Cloud Memorystore does not reduce the cost of running Apache Spark and managing a cluster in Compute Engine is not the most cost-effective.
+
+You are working with a U.S. hospital to extract data from an electronic health record (EHR) system. The hospital has offered to provide business requirements, but there is little information about regulations in the documented business requirements. What regulations would you look to for more guidance on complying with relevant regulations?
+A. GDPR
+B. SOX
+C. HIPAA
+D. PCI DSS
+7. C. The relevant health regulation is HIPAA, which regulates healthcare data in the United States. Option A is incorrect, as GDPR is a European Union privacy regulation. Option B is incorrect, as SOX is a regulation that applies to the financial industry. Option D is incorrect, because the Payment Card Industry Data Security Standard does not apply to healthcare data.
+
+What security control can be used to help detect changes to data?
+A. Firewall rules
+B. Message digests
+C. Authentication
+D. Authorization
+8. B. Option B is correct. Message digests are used to detect changes in files. Option A is incorrect because firewall rules block network traffic and are not related to detecting changes to data. Options C and D are important for controlling access to data, but they are not directly related to detecting changes to data.
+
+Your company has a data classification scheme for categorizing data as secret, sensitive, private, and public. There are no confidentiality requirements for public data. All other data must be encrypted at rest. Secret data must be encrypted with keys that the company controls. Sensitive and private data can be encrypted with keys managed by a third party. Data will be stored in GCP. What would you recommend in order to meet these requirements while minimizing cost and administrative overhead?
+A. Use Cloud KMS to manage keys for all data.
+B. Use Cloud KMS for secret data and Google default encryption for other data.
+C. Use Google default encryption for all data.
+D. Use a custom encryption algorithm for all data.
+9. B. B is correct. Cloud KMS allows the customer to manage keys used to encrypt secret data. The requirements for the other categories are met by GCP’s default encryption-at-rest practice. Public data does not need to be encrypted, but there is no additional cost or overhead for having it encrypted at rest. Option A would meet the security requirements, but it would involve managing keys for more data than is necessary, and that would increase administrative overhead. Option C does not meet the requirements of secret data. Option D is a terrible choice. Encryption algorithms are difficult to develop and potentially vulnerable to cryptanalysis attacks. It would cost far more to develop a strong encryption algorithm than to use Cloud KMS and default encryption.
+
+You manage a service with several databases. The queries to the relational database are increasing in latency. Reducing the amount of data in tables will improve performance and reduce latency. The application administrator has determined that approximately 60 percent of the data in the database is more than 90 days old and has never been queried and does not need to be in the database. You are required to keep the data for five years in case it is requested by auditors. What would you propose to decrease query latency without increasing costs—or at least keeping any cost increases to a minimum?
+A. Horizontally scale the relational database.
+B. Vertically scale the relational database.
+C. Export data more than 90 days old, store it in Cloud Storage Coldline class storage, and delete that data from the relational database.
+D. Export data more than 90 days old, store it in Cloud Storage multiregional class storage, and delete that data from the relational database.
+10. C. The correct answer is C. Data that is not queried does not need to be in the database to meet business requirements. If the data is needed, it can be retrieved from other storage systems, such as Cloud Storage. Exporting and deleting data will reduce the amount of data in tables and improve performance. Since the data is rarely accessed, it is a good candidate for archival, Coldline storage. Answers A and B are incorrect because scaling either vertically or horizontally will increase costs more than the cost of storing the data in archival storage. Option D is incorrect because multiregional storage is more expensive than Coldline storage and multiregion access is not needed.
+
+Your company is running several custom applications that were written by developers who are no longer with the company. The applications frequently fail. The DevOps team is pagedmore for these applications than any others. You propose replacing those applications with several managed services in GCP. A manager who is reviewing your cost estimates for using managed services in GCP notes that the cost of the managed services will be more than what they pay for internal servers. What would you recommend as the next step for the manager?
+A. Nothing. The manager is correct—the costs are higher. You should reconsider your recommendation.
+B. Suggest that the manager calculate total cost of ownership, which includes the cost to support the applications as well as infrastructure costs.
+C. Recommend running the custom applications in Compute Engine to lower costs.
+D. Recommend rewriting the applications to improve reliability.
+11. B. Option B is correct. The manager does not have an accurate cost estimate of supporting the applications if operational support costs are not considered. The manager should have an accurate estimate of TCO before proceeding. Option A is incorrect because the manager does not have an accurate estimate of all costs. Option C is incorrect because it does not address the reliability issues with the applications. Option D may be a reasonable option, but if managed services meet the requirements, using them will solve the reliability issues faster than developing new applications.
+
+A director at Mountkirk Games has asked for your recommendation on how to measure the success of the migration to GCP. The director is particularly interested in customer satisfaction. What KPIs would you recommend?
+A. Average revenue per customer per month
+B. Average time played per customer per week
+C. Average time played per customer per year
+D. Average revenue per customer per year
+12. B. Option B is the best answer because it is a measure of how much customers are engaged in the game and playing. If average time played goes down, this is an indicator that customers are losing interest in the game. If the average time played goes up, they are more engaged and interested in the game. Options A and D are incorrect because revenue does not necessarily correlate with customer satisfaction. Also, it may not correlate with how much customers played the game if revenue is based on monthly subscriptions, for example. Option C is wrong because a year is too long a time frame for detecting changes as rapidly as one can with a weekly measure.
+
+Mountkirk Games is implementing a player analytics system. You have been asked to document requirements for a stream processing system that will ingest and preprocess data before writing it to the database. The preprocessing system will collect data about each player for one minute and then write a summary of statistics about that database. The project manager has provided the list of statistics to calculate and a rule for calculating values for missing data. What other business requirements would you ask of the project manager?
+A. How long to store the data in the database?
+B. What roles and permissions should be in place to control read access to data in the database?
+C. How long to wait for late-arriving data?
+D. A list of managed services that can be used in this project
+13. C. Option C is correct. In stream processing applications that collect data for a time and then produce summary or aggregated data, there needs to be a limit on how long the processor waits for late-arriving data before producing results. Options A and B are incorrect because you do not need to know requirements for data lifecycle management or access controls to the database at this point, since your focus is on ingesting raw data and writing statistics to the database. Option D is incorrect. An architect should provide that list to a project manager, not the other way around.
+
+A new data warehouse project is about to start. The data warehouse will collect data from 14 different sources initially, but this will likely grow over the next 6 to 12 months. What managed GCP service would you recommend for managing metadata about the data warehouse sources?
+A. Data Catalog
+B. Cloud Dataprep
+C. Cloud Dataproc
+D. BigQuery
+14. A. The correct option is A. Data Catalog is a managed service for metadata. Option B is incorrect, as Dataprep is a tool for preparing data for analysis and machine learning. Option C is incorrect, as Dataproc is a managed Hadoop and Spark service. Option D is incorrect because BigQuery is a database service designed for analytic databases and data warehousing.
+
+You are consulting for a multinational company that is moving its inventory system to GCP. The company wants to use a managed database service, and it requires SQL and strong consistency. The database should be able to scale to global levels. What service would you recommend?
+A. Bigtable
+B. Cloud Spanner
+C. Cloud Datastore
+D. BigQuery
+15. B. The correct option is B. Cloud Spanner is a horizontally scalable relational database that provides strong consistency, SQL, and scales to a global level. Options A and C are incorrect because they do not support SQL. Option D is incorrect because an inventory system is a transaction processing system, and BigQuery is designed for analytic, not transaction processing systems.
+
+TerramEarth has interviewed dealers to better understand their needs regarding data. Dealers would like to have access to the latest data available, and they would like to minimize the amount of data they have to store in their databases and object storage systems. How would you recommend that TerramEarth provide data to their dealers?
+A. Extract dealer data to a CSV file once per night during off-business hours and upload it to a Cloud Storage bucket accessible to the dealer.
+B. Create an API that dealers can use to retrieve specific pieces of data on an as-needed basis.
+C. Create a database dump using the database export tool so that dealers can use the database import tool to load the data into their databases.
+D. Create a user account on the database for each dealer and have them log into the database to run their own queries.
+16. B. Option B is correct. An API would allow dealers to access up-to-date information and allow them to query only for the data that they need. Dealers do not need to know implementation details of TerramEarth’s database. Options A and C are incorrect because nightly extracts or exports would not give access to up-to-date data, which could change during the day. Option D is incorrect because it requires the dealers to understand how to query a relational database. Also, it is not a good practice to grant direct access to important business databases to people or services outside the company.
+
+Your company has large volumes of unstructured data stored on several network-attached storage systems. The maintenance costs are increasing, and management would like to consider alternatives. What GCP storage system would you recommend?
+A. Cloud SQL
+B. Cloud Storage
+C. Cloud Datastore
+D. Bigtable
+17. B. The correct option is B. Cloud Storage is an object storage system well suited to storing unstructured data. Option A is incorrect because Cloud SQL provides relational databases that are used for structured data. Option C is incorrect because Cloud Datastore is a NoSQL document database used with flexible schema data. Option D is incorrect, as Bigtable is a wide-column database that is not suitable for unstructured data.
+
+A customer-facing application is built using a microservices architecture. One of the services does not scale as fast as the service that sends it data. This causes the sending service to wait while the other service processes the data. You would like to change the integration to use asynchronous instead of synchronous calls. What is one way to do this?
+A. Create a Cloud Pub/Sub topic, have the sending service write data to the topic, and have the receiving service read from the topic.
+B. Create a Cloud Storage bucket, have the sending service write data to the topic, and have the receiving service read from the topic.
+C. Have the sending service write data to local drives, and have the receiving service read from those drives.
+D. Create a Bigtable database, have the sending service write data to the topic, and have the receiving service read from the topic.
+18. A. Option A is correct. Cloud Pub/Sub is designed to provide messaging services and fits this use case well. Options B and D are incorrect because, although you may be able to implement asynchronous message exchange using those storage systems, it would be inefficient and require more code than using Cloud Pub/Sub. Option C is incorrect because this would require both the sending and receiving services to run on the same VM.
+
+A product manager at TerramEarth would like to use the data that TerramEarth collects to predict when equipment will break down. What managed services would you recommend TerramEarth to consider?
+A. Bigtable
+B. Cloud Dataflow
+C. Cloud AutoML
+D. Cloud Spanner
+19. C. The correct answer is C. Cloud AutoML is a managed service for building machine learning models. TerramEarth’s data could be used to build a predictive model using AutoML. Options A and D are incorrect—they are databases and do not have the tools for building predictive models. Option B is wrong because Cloud Dataflow is a stream and batch processing service.

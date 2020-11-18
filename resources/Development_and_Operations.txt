@@ -1,0 +1,104 @@
+A team of developers is tasked with developing an enterprise application. They have interviewed stakeholders and collected requirements. They are now designing the system and plan to begin implementation next. After implementation, they will verify that the application meets specifications. They will not revise the design once coding starts. What application development methodology is this team using?
+A. Extreme programming
+B. Agile methodology
+C. Waterfall methodology
+D. Spiral methodology
+1. C. The correct answer is C. This is an example of waterfall methodology because each stage of the software development lifecycle is performed once and never revisited. Option A is incorrect. Extreme programming is a type of agile methodology. Option B is incorrect because there is no tight collaboration, rapid development and deployment, and frequent testing. Option D is incorrect because the steps of the software development lifecycle are not repeated with each iteration focused on defining a subset of work and identifying risks.
+
+A team of developers is tasked with developing an enterprise application. They have interviewed stakeholders and set a scope of work that will deliver a subset of the functionality needed. Developers and stakeholders have identified risks and ways of mitigating them. They then proceed to gather requirements for the subset of functionalities to be implemented. That is followed by design, implementation, and testing. There is no collaboration between developers and stakeholders until after testing, when developers review results with stakeholders and plan the next iteration of development. What application development methodology is this team using?
+A. Extreme programming
+B. Agile methodology
+C. Waterfall methodology
+D. Spiral methodology
+2. D. The correct answer is D. This is an example of spiral methodology because each stage of the software development lifecycle is repeated in a cyclical manner, and each iteration begins with scoping work and identifying risks. Option A is incorrect. Extreme programming is a type of agile methodology. Option B is incorrect because there is no tight collaboration, rapid development and deployment, and frequent testing. Option C is incorrect because the steps of the software development lifecycle are repeated.
+
+A team of developers is tasked with developing an enterprise application. They meet daily with stakeholders to discuss the state of the project. The developers and stakeholders have identified a set of functionalities to be implemented over the next two weeks. After some design work, coding begins. A new requirement is discovered, and developers and stakeholders agree to prioritize implementing a feature to address this newly discovered requirement. As developers complete small functional units of code, they test it. If the code passes the tests, the code unit is integrated with the version-controlled codebase. What application development methodology is this team using?
+A. Continuous integration
+B. Agile methodology
+C. Waterfall methodology
+D. Spiral methodology
+3. B. The correct answer is B. This is an example of an agile methodology because developers and stakeholders work closely together, development is done in small units of work that include frequent testing and release, and the team is able to adapt to changes in requirements without following a rigid linear or cyclical process. Option A is incorrect. Continuous integration is not an application development methodology. Option D is incorrect because the steps of the software development lifecycle are not repeated with each iteration focused on defining a subset of work and identifying risks.
+
+You are a developer at a startup company that is planning to release its first version of a new mobile service. You have discovered a design flaw that generates and sends more data to mobile devices than is needed. This is increasing the latency of messages between mobile devices and backend services running in the cloud. Correcting the design flaw will delay the release of the service by at least two weeks. You decide to address the long latency problem by coding a workaround that does not send the unnecessary data. The design flaw is still there and is generating unnecessary data, but the service can ship under these conditions. This is an example of what?
+A. Incurring technical debt
+B. Paying down technical debt
+C. Shifting risk
+D. Improving security
+4. A. The correct answer is A. You are incurring technical debt by making a suboptimal design and coding choice in order to meet other requirements or constraints. The code will need to be refactored in the future. Option B is incorrect. This is not an example of refactoring suboptimal code. Option C is incorrect, as there is no shifting or transferring of risk. Option D is incorrect. There is no mention that this change would improve the confidentiality, integrity, or availability of the service.
+
+You are a developer at a startup company that has just released a new service. During development, you made suboptimal coding choices to keep the project on schedule. You are now planning your next two weeks of work, which you decide will include implementing a feature the product manager wanted in the initial release but was postponed to a release occurring soon after the initial release. You also include time to refactor code that was introduced to correct a bug found immediately before the planned release date. That code blocks the worst impact of the bug, but it does not correct the flaw. Revising that suboptimal code is an example of what?
+A. Incurring technical debt
+B. Paying down technical debt
+C. Shifting risk
+D. Improving security
+5. B. The correct answer is B. You are paying down technical debt by changing suboptimal code that was intentionally used to mitigate but not correct a bug. Option A is incorrect. This is not an example of incurring technical debt because you are not introducing suboptimal code in order to meet other requirements or constraints. Option C is incorrect. There is no shifting or transferring of risk. Option D is incorrect. There is no mention that this change would improve the confidentiality, integrity, or availability of the service.
+
+As a developer of a backend service for managing inventory, your manager has asked you to include a basic API for the inventory service. You plan to follow best practice recommendations. What is the minimal set of API functions that you would include?
+A. Create, read, update, and delete
+B. List, get, create, update, and delete
+C. Create, delete, and list
+D. Create and delete
+6. B. The correct answer is B. The standard API operations are list, get, create, update, and delete. Options A, C, and D are incorrect because they are all missing at least one of the standard functions.
+
+A junior developer asks your advice about handling errors in API functions. The developer wants to know what kind of data and information should be in an API error message. What would you recommend?
+A. Return HTTP status 200 with additional error details in the payload.
+B. Return a status code form with the standard 400s and 500s HTTP status codes along with additional error details in the payload.
+C. Return error details in the payload, and do not return a code.
+D. Define your own set of application-specific error codes.
+7. B. The correct answer is B. The API should return a standard status code used for errors, in other words, from the 400s or 500s, and include additional details in the payload. Option A is incorrect. 200 is the standard HTTP success code. Option C is incorrect because it does not return a standard error code. Option D is incorrect because HTTP APIs should follow broadly accepted conventions so that users of the API can process standard error messages and not have to learn application-specific error messages.
+
+A junior developer asks your advice about performing authentication in API functions. The developer wants to know how they can allow users of the API to make assertions about what they are authorized to do. What would you recommend?
+A. Use JSON Web Tokens (JWTs)
+B. Use API keys
+C. Use encryption
+D. Use HTTPS instead of HTTP
+8. A. The correct answer is A. JWTs are a standard way to make authentication assertions securely. Option B is incorrect. API keys can be used for authentication, but they do not carry authentication assertions. Option C is incorrect. Encryption does not specify authentication information. Option D is incorrect. HTTPS does not provide authentication assertions.
+
+Your startup has released a new online game that includes features that allow users to accumulate points by playing the game. Points can be used to make in-game purchases. You have discovered that some users are using bots to play the game programmatically much faster than humans can play the game. The use of bots is unauthorized in the game. You modify the game API to prevent more than 10 function calls per user, per minute. This is an example of what practice?
+A. Encryption
+B. Defense in depth
+C. Least privileges
+D. Resource limiting
+9. D. The correct answer is D. This is an example of rate limiting because it is putting a cap on the number of function calls allowed by a user during a specified period of time. Option A is incorrect. This is not encryption. Option B is incorrect because defense in depth requires at least two distinct security controls. Option C is incorrect. The solution does not limit privileges based on a user’s role. In this case, most users are players. They continue to have the same privileges that they had before resource limiting was put in place.
+
+A team of developers is creating a set of tests for a new service. The tests are defined using a set of conditions or input values and expected output values. The tests are then executed by reading the test data source, and for each test the software being tested is executed and the output is compared to the expected value. What kind of testing framework is this?
+A. Data-driven testing
+B. Hybrid testing
+C. Keyword-driven testing
+D. Model-based testing
+10. A. The correct answer is A. This is an example of data-driven testing because the input data and expected output data are stated as part of the test. Option B is incorrect because this testing approach does not include two or more frameworks. Option C is incorrect because it does not include a set of detailed instructions for executing the test. Option D is incorrect. No simulator is used to generate inputs and expected outputs.
+
+Your company is moving an enterprise application to Google Cloud. The application runs on a cluster of virtual machines, and workloads are distributed by a load balancer. Your team considered revising the application to use containers and the Kubernetes Engine, but they decide not to make any unnecessary changes before moving the application to the cloud. This is an example of what migration strategy?
+A. Lift and shift
+B. Move and improve
+C. Rebuild in the cloud
+D. End of life
+11. A. The correct answer is A. This is a lift-and-shift migration because only required changes are made to move the application to the cloud. Option B and Option C are incorrect because there is no new development in this migration. Option D is not a valid type of migration strategy.
+
+As a consultant to an insurance company migrating to the Google Cloud, you have been asked to lead the effort to migrate data from AWS S3 to Cloud Storage. Which transfer method would you consider first?
+A. Google Transfer Service
+B. gsutil command line
+C. Google Transfer Appliance
+D. Cloud Dataproc
+12. A. The correct answer is the Google Transfer Service, which executes jobs that specify source and target locations. It is the recommended method for transferring data from other clouds. Option B could be used, but it is not the recommended practice, so it should not be the first option considered. Option C is incorrect. The Google Transfer Service has to be installed in your data center, so it is not an option for migrating data from a public cloud. Option D is incorrect. Cloud Dataproc is a managed Hadoop and Spark service. It is not used for data migrations.
+
+You are a consultant to an insurance company migrating to GCP. Five petabytes of business-sensitive data need to be transferred from the on-premises data center to Cloud Storage. You have a 10 GB network between the on-premises data center and Google Cloud. What transfer option would you recommend?
+A. gsutil
+B. gcloud
+C. Cloud Transfer Appliance
+D. Cloud Transfer Service
+13. C. The correct answer is C. The Cloud Transfer Appliance should be used. Sending 5 PB over a 10 GB network would take approximately two months to transfer. Option A and Option D are not correct because they would use the 10 GB network, and that would take too long to transfer and consume network resources. Option B is incorrect. gcloud is used to manage many GCP services; it is not used to transfer data from on-premises data centers to Cloud Storage.
+
+You are migrating a data warehouse from an on-premises database to BigQuery. You would like to write a script to perform some of the migration steps. What component of the GCP SDK will you likely need to use to create the new data warehouse in BigQuery?
+A. cbt
+B. bq
+C. gsutil
+D. kubectl
+14. B. The correct answer is B. bq is the GCP SDK component used to manage BigQuery. Option A is incorrect. cbt is used to manage Bigtable. Option C is incorrect. gsutil is used to work with Cloud Storage. Option D is incorrect. kubect is used to work with Kubernetes.
+
+You are setting up a new laptop that is configured with a standard set of tools for developers and architects, including some GCP SDK components. You will be working extensively with the GCP SDK and want to know specifically which components are installed and up to date. What command would you run on the laptop?
+A. gsutil component list
+B. cbt component list
+C. gcloud component list
+D. bq component list
+15. C. The correct answer is C. gcloud is the utility that manages SDK components. Option A is incorrect. gsutil is for working with Cloud Storage. Option B is incorrect. cbt is for working with Bigtable. Option D is incorrect. bq is used for working with BigQuery.

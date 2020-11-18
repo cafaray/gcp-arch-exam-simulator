@@ -1,0 +1,104 @@
+A company is migrating an enterprise application to Google Cloud. When running onpremises, application administrators created user accounts that were used to run background jobs. There was no actual user associated with the account, but the administrators needed an identity with which to associate permissions. What kind of identity would you recommend using when running that application in GCP?
+A. Google-associated account
+B. Cloud Identity account
+C. Service account
+D. Batch account
+1. C. Option C, a service account, is the best choice for an account that will be associated with an application or resource, such as a VM. Both options A and B should be used with actual users. Option D is not a valid type of identity in GCP.
+
+You are tasked with managing the roles and privileges granted to groups of developers, quality assurance testers, and site reliability engineers. Individuals frequently move between groups. Each group requires a different set of permissions. What is the best way to grant access to resources that each group needs?
+A. Create a group in Google Groups for each of the three groups: developers, quality assurance testers, and site reliability engineers. Add the identities of each user to their respective group. Assign predefined roles to each group.
+B. Create a group in Google Groups for each of the three groups: developers, quality assurance testers, and site reliability engineers. Assign permissions to each user and then add the identities to their respective group.
+C. Assign each user a Cloud Identity, and grant permissions directly to those identities.
+D. Create a G Suite group for each of the three groups: developers, quality assurance testers, and site reliability engineers. Assign permissions to each user and then add the identities to their respective group.
+2. A. The correct answer is A. The identities should be assigned to groups and predefined roles assigned to those groups. Assigning roles to groups eases administrative overhead because users receive permissions when they are added to a group. Removing a user from a group removes permissions from the user, unless the user receives that permission in another way. Options B, C, and D are incorrect because you cannot assign permissions directly to a user.
+
+You are making a presentation on Google Cloud security to a team of managers in your company. Someone mentions that to comply with regulations, the organization will have to follow several security best practices, including least privilege. They would like to know how GCP supports using least privilege. What would you say?
+A. GCP provides a set of three broad roles: owner, editor, and viewer. Most users will be assigned viewer unless they need to change configurations, in which case they will receive the editor role, or if they need to perform administrative functions, in which case they will be assigned owner.
+B. GCP provides a set of fine-grained permissions and predefined roles that are assigned those permissions. The roles are based on commonly grouped responsibilities. Users will be assigned only the predefined roles needed for them to perform their duties.
+C. GCP provides several types of identities. Users will be assigned a type of identity most suitable for their role in the organization.
+D. GCP provides a set of fine-grained permissions and custom roles that are created and managed by cloud users. Users will be assigned a custom role designed specifically for that user’s responsibilities.
+3. B. The correct answer is option B. Fine-grained permission and predefined roles help implement least privilege because each predefined role has only the permissions needed to carry out a specific set of responsibilities. Option A is incorrect. Primitive roles are coarse grained and grant more permissions than often needed. Option C is incorrect. Simply creating a particular type of identity does not by itself associate permissions with users. Option D is not the best option because it requires more administrative overhead than Option B, and it is a best practice to use predefined roles as much as possible and only create custom roles when a suitable predefined role does not exist.
+
+An online application consists of a front-end service, a back-end business logic service, and a relational database. The front-end service is stateless and runs in an instance group that scales between two and five servers. The back-end business logic runs in a Kubernetes Engine cluster. The database is implemented using Cloud SQL PostgreSQL. How many trust domains should be used for this application?
+A. 1.
+B. 2.
+C. 3.
+D. None. These services do not need trust domains.
+4. C. The correct option is C—three trust domains. The frontend, backend, and database are all logically separated. They run on three different platforms. Each should be in its own trust domain. Options A and B are incorrect, as they are too few. Option D is incorrect because all services should be considered within a trust domain.
+
+In the interest of separating duties, one member of your team will have permission to perform all actions on logs. You will also rotate the duty every 90 days. How would you grant the necessary permissions?
+A. Create a Google Group, assign roles/logging.admin to the group, add the identity of the person who is administering the logs at the start of the 90-day period, and remove the identity of the person who administered logs during the previous 90 days.
+B. Assign roles/logging.admin to the identity of the person who is administering the logs at the start of the 90-day period, and revoke the role from the identity of the person who administered logs during the previous 90 days.
+C. Create a Google Group, assign roles/logging.privateLogViewer to the group, add the identity of the person who is administering the logs at the start of the 90-day period, and remove the identity of the person who administered logs during the previous 90 days.
+D. Assign roles/logging.privateLogViewer to the identity of the person who is administering the logs at the start of the 90-day period, and revoke the role from the identity of the person who administered logs during the previous 90 days.
+5. A. The correct answer is A. A group should be created for administrators and granted the necessary roles, which in this case is roles/logging.admin. The identity of the person responsible for a period should be added at the start of the period, and the person who was previously responsible should be removed from the group. Option B is not the best option because it assigns roles to an identity, which is allowed but not recommended. If the team changes strategy and wants to have three administrators at a time, roles would have to be granted and revoked to multiple identities rather than a single group. Options C and D are incorrect because roles/logging.privateLogViewer does not grant administrative access.
+
+Your company is subject to several government and industry regulations that require all personal healthcare data to be encrypted when persistently stored. What must you do to ensure that applications processing protected data encrypts it when it is stored on disk or SSD?
+A. Configure a database to use database encryption.
+B. Configure persistent disks to use disk encryption.
+C. Configure the application to use application encryption.
+D. Nothing. Data is encrypted at rest by default.
+6. D. The correct answer is D. You do not need to configure any settings to have data encrypted at rest in GCP. Options B, C, and D are all incorrect because no configuration is required.
+
+Data can be encrypted at multiple levels, such as at the platform, infrastructure, and device levels. Data may be encrypted multiple times before it is written to persistent storage. At the device level, how is data encrypted in GCP?
+A. AES256 or AES128 encryption
+B. Elliptic curve cryptography
+C. Data Encryption Standard (DES)
+D. Blowfish
+7. A. The correct answer is A. Option B is incorrect, but it is a strong encryption algorithm and could be used to encrypt data. Option C is incorrect. DES is a weak encryption algorithm that is easily broken by today’s methods. Option D is incorrect. Blowfish is a strong encryption algorithm designed as a replacement for DES and other weak encryption algorithms but it is not used in GCP.
+
+In GCP, each data chunk written to a storage system is encrypted with a data encryption key. The key is kept close to the data that it encrypts to ensure low latency when retrieving the key. How does GCP protect the data encryption key so that an attacker who gained access to the storage system storing the key could not use it to decrypt the data chunk?
+A. Writes the data encryption key to a hidden location on disk
+B. Encrypts the data encryption key with a key encryption key
+C. Stores the data encryption key in a secure Cloud SQL database
+D. Applies an elliptic curve encryption algorithm for each data encryption key
+8. B. The correct answer is B. The data encryption key is encrypted using a key encryption key. Option A is incorrect. There are no hidden locations on disk that are inaccessible from a hardware perspective. Option C is incorrect. Keys are not stored in a relational database. Option D is incorrect. An elliptic curve encryption algorithm is not used.
+
+Data can be encrypted at different layers of the OSI network stack. Google Cloud may encrypt network data at multiple levels. What protocol is used at layer 7?
+A. IPSec
+B. TLS
+C. ALTS
+D. ARP
+9. C. The correct answer is C. Layer 7 is the application layer, and Google uses ALTS at that level. Options A and B are incorrect. IPSec and TLS are used by Google but not at layer 7. Option D is incorrect. ARP is an address resolution protocol, not a security protocol.
+
+After reviewing security requirements with compliance specialists at your company, you determine that your company will need to manage its own encryption keys. Keys may be stored in the cloud. What GCP service would you recommend for storing keys?
+A. Cloud Datastore
+B. Cloud Firestore
+C. Cloud KMS
+D. Bigtable
+10. C. The correct answer is C. Cloud KMS is the key management service in GCP. It is designed specifically to store keys securely and manage the lifecycle of keys. Options A and C are incorrect. They are both document databases and are not suitable for low-latency, highly secure key storage. Option D is incorrect. Bigtable is designed for low-latency, highwrite volume operations over variable structured data. It is not designed for secure key management.
+
+The finance department of your company has notified you that logs generated by any finance application will need to be stored for five years. It is not likely to be accessed, but it has to be available if needed. If it were needed, you would have up to three days to retrieve the data. How would you recommend storing that data?
+A. Keep it in Stackdriver Logging.
+B. Export it to Cloud Storage and store it in Coldline class storage.
+C. Export it to BigQuery and partition it by year.
+D. Export it to Cloud Pub/Sub using a different topic for each year.
+11. B. The correct answer is B. Cloud Storage is the best option for maintaining archived data such as log data. Also, since the data is not likely to be accessed, Coldline storage would be the most cost-effective option. Option A is incorrect because Stackdriver does not retain log data for five years. Option C is not the best option since the data does not need to be queried, and it is likely not structured sufficiently to be stored efficiently in BigQuery. Option D is incorrect. Cloud Pub/Sub is a messaging service, not a long-term data store.
+
+The legal department in your company notified software development teams that if a developer can deploy to production, then that developer cannot be allowed to perform the final code review before deploying to production. This is an example of which security best practice?
+A. Defense in depth
+B. Separation of duties
+C. Least privilege
+D. Encryption at rest
+12. B. The correct answer is B. The duties of the development team are separated so that no one person can both approve a deployment and execute a deployment. Option A is incorrect. Defense in depth is the use of multiple security controls to mitigate the same risk. Option C is incorrect because least privilege applies to a set of permissions granted for a single task, such as deploying to production. Option D is incorrect. Encryption at rest is not related to the scenario described in the question.
+
+A startup has hired you to advise on security and compliance related to their new online game for children ages 10 to 14. Players will register to play the game, which includes collecting the name, age, and address of the player. Initially, the company will target customers in the United States. With which regulation would you advise them to comply?
+A. HIPAA/HITECH
+B. SOX
+C. COPPA
+D. GDPR
+13. C. The correct answer is C. The service will collect personal information of children under 13 in the United States, so COPPA applies. Option A is incorrect because HIPAA and HITECH apply to protected healthcare data. Option B is incorrect because SOX applies to financial data. Option D is incorrect because GDPR applies to citizens of the European Union, not the United States.
+
+The company for which you work is expanding from North America to set up operations in Europe, starting with Germany and the Netherlands. The company offers online services that collect data on users. With what regulation must your company comply?
+A. HIPAA/HITECH
+B. SOX
+C. COPPA
+D. GDPR
+14. D. The correct answer is D. The service will collect personal information from citizens of the European Union, so GDPR applies. Option A is incorrect because HIPAA and HITECH apply to protected healthcare data. Option B is incorrect because SOX applies to financial data. Option C is incorrect, as it applies to children in the United States.
+
+Enterprise Self-Storage Systems is a company that recently acquired a startup software company that provides applications for small and midsize self-storage companies. The company is concerned that the business strategy of the acquiring company is not aligned with the software development plans of the software development teams of the acquired company. What IT framework would you recommend the company follow to better align business strategy with software development?
+A. ITIL
+B. TOGAF
+C. Porters Five Forces Model
+D. Ansoff Matrix
+15. A. The correct answer is A. ITIL is a framework for aligning business and IT strategies and practices. Option B is incorrect because TOGAF is an enterprise architecture framework. Option C is incorrect because the Porters Five Forces Model is used to assess competitiveness. Option D is incorrect because the Ansoff Matrix is used to summarize growth strategies.

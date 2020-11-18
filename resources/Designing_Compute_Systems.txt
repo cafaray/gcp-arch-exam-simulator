@@ -1,0 +1,139 @@
+You are consulting for a client that is considering moving some on-premises workloads to the Google Cloud Platform. The workloads are currently running on VMs that use a specially hardened operating system. Application administrators will need root access to the operating system as well. The client wants to minimize changes to the existing configuration. Which GCP compute service would you recommend?
+A. Compute Engine
+B. Kubernetes Engine
+C. App Engine Standard
+D. App Engine Flexible
+1. A. The correct answer is A. Compute Engine instances meet all of the requirements: they can run VMs with minimal changes, and application administrators can have root access. Option B would require the VMs to be deployed as containers. Option C is incorrect because App Engine Standard is limited to applications that can execute in a languagespecific runtime. Option D is incorrect, as App Engine Flexible runs containers, not VMs.
+
+You have just joined a startup that analyzes healthcare data and makes recommendations to healthcare providers to improve the quality of care while controlling costs. You have to comply with privacy regulations. A compliance consultant recommends that your startup control encryption keys used to encrypt data stored on cloud servers. You’d rather have GCP manage all encryption components to minimize your work and infrastructure management responsibilities. What would you recommend?
+A. Use default encryption enabled on Compute Engine instances.
+B. Use Google Cloud Key Management Service to store keys that you create and use them to encrypt storage used with Compute Engine instances.
+C. Implement a trusted key store on premises, create the keys yourself, and use them to encrypt storage used with Compute Engine instances.
+D. Use an encryption algorithm that does not use keys.
+2. B. The best option is B. It meets the requirement of creating and managing the keys without requiring your company to deploy and manage a secure key store. Option A is incorrect because it does not meet the requirements. Option C requires more setup and maintenance than Option B. Option D does not exist, at least for any strong encryption algorithm.
+
+A colleague complains that the availability and reliability of GCP VMs is poor because their instances keep shutting down with them issuing shutdown commands. No instance has run for more than 24 hours without shutting down for some reason. What would you suggest your colleague check to understand why the instances may be shutting down?
+A. Make sure that the Stackdriver agent is installed and collecting metrics.
+B. Verify that sufficient persistent storage is attached to the instance.
+C. Make sure that the instance availability is not set to preemptible.
+D. Ensure that an external IP address has been assigned to the instance.
+3. C. Option C is correct. The description of symptoms matches the behavior of preemptible instances. Option A is wrong because collecting performance metrics will not prevent shutdowns. Option B is incorrect, because shutdowns are not triggered by insufficient storage. Option D is incorrect, as the presence or absence of an external IP address would not affect shutdown behavior.
+
+Your company is working on a government contract that requires all instances of VMs to have a virtual Trusted Platform Module. What Compute Engine configuration option would you enable or disable your instances?
+A. Trusted Module Setting
+B. Shielded VMs
+C. Preemptible VMs
+D. Disable live migration
+4. B. Option B is correct. Shielded VMs include the vTPM along with Secure Boot and Integrity Monitoring. Option A is incorrect—there is no such option. Options C and D are not related to vTPM functionality.
+
+You are leading a lift-and-shift migration to the cloud. Your company has several load-balanced clusters that use VMs that are not identically configured. You want to make as few changes as possible when moving workloads to the cloud. What feature of GCP would you use to implement those clusters in the cloud?
+A. Managed instance groups
+B. Unmanaged instance groups
+C. Flexible instance groups
+D. Kubernetes clusters
+5. B. The correct answer is B. Unmanaged instance groups can have nonidentical instances. Option A is incorrect, as all instances are the same in managed instance groups. Option C is incorrect because there is no such thing as a flexible instance group. Option D is incorrect because Kubernetes clusters run containers and would require changes that are not required if the cluster is migrated to an unmanaged instance group.
+
+Your startup has a stateless web application written in Python 3.7. You are not sure what kind of load to expect on the application. You do not want to manage servers or containers if you can avoid it. What GCP service would you use?
+A. Compute Engine
+B. App Engine
+C. Kubernetes Engine
+D. Cloud Dataproc
+6. B. The correct answer is B. The requirements call for a PaaS. Second-generation App Engine Standard supports Python 3.7, and it does not require users to manage VMs or containers. Option A is incorrect because you would have to manage VMs if you used Compute Engine. Option C is incorrect, as you would have to create containers to run in Kubernetes Engine. Option D is incorrect because Cloud Dataproc is a managed Hadoop and Spark service, and it is not designed to run Python web applications.
+
+Your department provides audio transcription services for other departments in your company. Users upload audio files to a Cloud Storage bucket. Your application transcribes the audio and writes the transcript file back to the same bucket. Your process runs every day at midnight and transcribes all files in the bucket. Users are complaining that they are not notified if there is a problem with the audio file format until the next day. Your application has a program that can verify the quality of an audio file in less than two seconds. What changes would you make to the workflow to improve user satisfaction?
+A. Include more documentation about what is required to transcribe an audio file successfully.
+B. Use Cloud Functions to run the program to verify the quality of the audio file when the file is uploaded. If there is a problem, notify the user immediately.
+C. Create a Compute Engine instance and set up a cron job that runs every hour to check the quality of files that have been uploaded into the bucket in the last hour. Send notices to all users who have uploaded files that do not pass the quality control check.
+D. Use the App Engine Cron service to set up a cron job that runs every hour to check the quality of files that have been uploaded into the bucket in the last hour. Send notices to all users who have uploaded files that do not pass the quality control check.
+7. B. The correct answer is B. This solution notifies users immediately of any problem and does not require any servers. Option A does not solve the problem of reducing time to notify users when there is a problem. Options C and D solve the problem but do not notify users immediately. Option C also requires you to manage a server.
+
+You have inherited a monolithic Ruby application that you need to keep running. There will be minimal changes, if any, to the code. The previous developer who worked with this application created a Dockerfile and image container with the application and needed libraries. You’d like to deploy this in a way that minimizes your effort to maintain it. How would you deploy this application?
+A. Create an instance in Compute Engine, install Docker, install the Stackdriver agent, and then run the Docker image.
+B. Create an instance in Compute Engine, but do not use the Docker image. Install the application, Ruby, and needed libraries. Install the Stackdriver agent. Run the application directly in the VM, not a container.
+C. Use App Engine Flexible to run the container image. App Engine will monitor as needed.
+D. Use App Engine Standard to run the container image. App Engine will monitor as needed.
+8. C. The correct answer is C. App Engine Flexible requires the least effort. App Engine Flexible will run the container and perform health checks and collect performance metrics. Options A and B are incorrect because provisioning and managing Compute Engine instances is more effort than using App Engine Flexible. Option D is incorrect because you cannot run a custom container in App Engine Standard.
+
+You have been asked to give a presentation on Kubernetes. How would you explain the difference between the cluster master and nodes?
+A. Cluster masters manage the cluster and run core services such as the controller manager, API server, scheduler, and etcd. Nodes run workload jobs.
+B. The cluster manager is an endpoint for API calls. All services needed to maintain a cluster are run on nodes.
+C. The cluster manager is an endpoint for API calls. All services needed to maintain a cluster are run on nodes, and workloads are run on a third kind of server, a runner.
+D. Cluster masters manage the cluster and run core services such as the controller manager, API server, scheduler, and etcd. Nodes monitor the cluster master and restart it if it fails.
+9. A. The correct answer is A. Cluster masters run core services for the cluster, and nodes run workload. Options B and C are incorrect, as the cluster manager is not just an endpoint for APIs. Also, there is no runner node type. Option D is incorrect because nodes do not monitor cluster masters.
+
+External services are not able to access services running in a Kubernetes cluster. You suspect a controller may be down. Which type of controller would you check?
+A. Pod
+B. Deployment
+C. Ingress Controller
+D. Service Controller
+10. C. Option C is correct. Ingress Controllers are needed by Ingress objects, which are objects that control external access to services running in a Kubernetes cluster. Option A is incorrect, as Pods are the lowest level of computational unit, and they run one or more containers. Option B is incorrect, as Deployments are versions of a service that run in a cluster. Option D is incorrect, as Services do not control access from external services.
+
+You are planning to run stateful applications in Kubernetes Engine. What should you use to support stateful applications?
+A. Pods
+B. StatefulPods
+C. StatefulSets
+D. PersistentStorageSets
+11. C. The correct answer is C. StatefulSets deploy pods with unique IDs, which allows Kubernetes to support stateful applications by ensuring that clients can always use the same pod. Answer A is incorrect, as pods are always used for both stateful and stateless applications. Options B and D are incorrect because they are not actually components in Kubernetes.
+
+Every time a database administrator logs into a Firebase database, you would like a message sent to your mobile device. Which compute service could you use that would minimize your work in deploying and running the code that sends the message?
+A. Compute Engine
+B. Kubernetes Engine
+C. Cloud Functions
+D. Cloud Dataflow
+12. C. Option C is correct because Cloud Functions can detect authentications to Firebase and run code in response. Sending a message would require a small amount of code, and this can run in Cloud Functions. Options A and B would require more work to set up a service to watch for a login and then send a message. Option D is incorrect, as Cloud Dataflow is a stream and batch processing platform not suitable for responding to events in Firebase.
+
+Your team has been tasked with deploying infrastructure for development, test, staging, and production environments in region us-west1. You will likely need to deploy the same set of environments in two additional regions. What service would allow you to use an Infrastructure as code (IaC) approach?
+A. Cloud Dataflow
+B. Deployment Manager
+C. Identity and Access Manager
+D. App Engine Flexible
+13. B. The correct answer is B. Deployment Manager is Google Cloud’s IaaS manager. Option A is incorrect because Cloud Dataflow is a stream and batch processing service. Option C, Identity and Access Management, is an authentication and authorization service. Option D, App Engine Flexible, is a PaaS offering that allows users to customize their own runtimes using containers.
+
+An IoT startup collects streaming data from industrial sensors and evaluates the data for anomalies using a machine learning model. The model scales horizontally. The data collected is buffered in a server for 10 minutes. Which of the following is a true statement about the system?
+A. It is stateful.
+B. It is stateless.
+C. It may be stateful or stateless, there is not enough information to determine.
+D. It is neither stateful nor stateless.
+14. A. The correct answer is A. This application is stateful. It collects and maintains data about sensors in servers and evaluates that data. Option B is incorrect because the application stores data about a stream, so it is stateful. Option C is incorrect because there is enough information. Option D is incorrect because the application stores data about the stream, so it is stateful.
+
+Your team is designing a stream processing application that collects temperature and pressure measurements from industrial sensors. You estimate that for the initial release, the application will need 8 to 12 n1-highmem-32 instances. Someone on the team suggests using a Cloud Memorystore cache. What could that cache be used for?
+A. A SQL database
+B. As a memory cache to store state data outside of instances
+C. An extraction, transformation, and load service
+D. A persistent object storage system
+15. B. The correct answer is B. Of the four options, a cache is most likely used to store state data. If instances are lost, state information is not lost as well. Option A is incorrect; Memorystore is not a SQL database. Option C is incorrect because Memorystore does not provide extraction, transformation, and load services. Option D is incorrect because Memorystore is not a persistent object store.
+
+A distributed application is not performing as well as expected during peak load periods. The application uses three microservices. The first of the microservices has the ability to send more data to the second service than the second service can process and keep up with. This causes the first microservice to wait while the second service processes data. What can be done to decouple the first service from the second service?
+A. Run the microservices on separate instances.
+B. Run the microservices in a Kubernetes cluster.
+C. Write data from the first service to a Cloud Pub/Sub topic and have the second service read the data from the topic.
+D. Scale both services together using MIGs.
+16. C. Option C is the correct answer. Using a queue between the services allows the first service to write data as fast as needed, while the second service reads data as fast as it can. The second service can catch up after peak load subsides. Options A, B, and D do not decouple the services.
+
+A colleague has suggested that you use the Apache Beam framework for implementing a highly scalable workflow. Which Google Cloud service would you use?
+A. Cloud Dataproc
+B. Cloud Dataflow
+C. Cloud Dataprep
+D. Cloud Memorystore
+17. B. Option B is the correct answer. Cloud Dataflow is Google Cloud’s implementation on Apache Beam. Option A, Cloud Dataproc, is a managed Hadoop and Spark service. Option C, Cloud Dataprep, is a data preparation tool for analysis and machine learning. Option D, Cloud Memorystore, is a managed cache service.
+
+Your manager wants more data on the performance of applications running in Compute Engine, specifically, data on CPU and memory utilization. What Google Cloud service would you use to collect that data?
+A. Cloud Dataprep
+B. Stackdriver
+C. Cloud Dataproc
+D. Cloud Memorystore
+18. B. Option B is the correct answer. Stackdriver is Google Cloud’s monitoring and logging service. Option A, Cloud Dataprep, is data preperation tool for analysis and machine learning. Option C, Cloud Dataproc, is a managed Hadoop and Spark service. Option D, Cloud Memorystore, is a managed cache service.
+
+You are receiving alerts that CPU utilization is high on several Compute Engine instances. The instances are all running a custom C++ application. When you receive these alerts, you deploy an additional instance running the application. A load balancer automatically distributes the workload across all of the instances. What is the best option to avoid having to add servers manually when CPU utilization is high?
+A. Always run more servers than needed to avoid high CPU utilization.
+B. Deploy the instances in a MIG, and use autoscaling to add and remove instances as needed.
+C. Run the application in App Engine Standard.
+D. Whenever you receive an alert, add two instances instead of one.
+19. B. The correct answer is B. Managed instances groups can autoscale, so this option would automatically add or remove instances as needed. Options A and D are not as cost efficient as Option B. Option C is incorrect because App Engine Standard does not provide a C++ runtime.
+
+A retailer has sales data streaming into a Cloud Pub/Sub topic from stores across the country. Each time a sale is made, data is sent from the point of sale to Google Cloud. The data needs to be transformed and aggregated before it is written to BigQuery. What service would you use to perform that processing and write data to BigQuery?
+A. Firebase
+B. Cloud Dataflow
+C. Cloud Memorystore
+D. Cloud Datastore
+20. B. Option B is correct. Cloud Dataflow is designed to support stream and batch processing, and it can write data to BigQuery. Options A is incorrect, as Firebase is GCP’s mobile developmet platform. Option D is incorrect, Datastore is a NoSQL database. Option C is incorrect because Cloud Memorystore is a managed cache service.

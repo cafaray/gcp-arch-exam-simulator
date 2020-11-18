@@ -1,0 +1,139 @@
+You are advising a customer on how to improve the availability of a data storage solution. Which of the following general strategies would you recommend?
+A. Keeping redundant copies of the data
+B. Lowering the network latency for disk writes
+C. Using a NoSQL database
+D. Using Cloud Spanner
+1. A. The correct answer is A. Redundancy is a general strategy for improving availability. Option B is incorrect because lowering network latency will not improve availability of the data storage system. Options C and D are incorrect because there is no indication that either a NoSQL or a relational database will meet the overall storage requirements of the system being discussed.
+
+A team of data scientists is analyzing archived data sets. The model building procedures run in batches. If the model building system is down for up to 30 minutes per day, it does not adversely impact the data scientists’ work. What is the minimal percentage availability among the following options that would meet this requirement?
+A. 99.99 percent
+B. 99.90 percent
+C. 99.00 percent
+D. 99.999 percent
+2. C. The minimum percentage availability that meets the requirements is option C, which allows for up to 14.4 minutes of downtime per day. All other options would allow for less downtime, but that is not called for by the requirements.
+
+Your development team has recently triggered three incidents that resulted in service disruptions. In one case, an engineer mistyped a number in a configuration file and in the other cases specified an incorrect disk configuration. What practices would you recommend to reduce the risk of these types of errors?
+A. Continuous integration/continuous deployment
+B. Code reviews of configuration files
+C. Vulnerability scanning
+D. Improved access controls
+3. B. The correct answer is B. A code review is a software engineering practice that requires an engineer to review code with another engineer before deploying it. Option A would not solve the problem, as continuous integration reduces the amount of effort required to deploy new versions of software. Options C and D are both security controls, which would not help identify misconfigurations.
+
+Your company is running multiple VM instances that have not had any downtime in the past several weeks. Recently, several of the physical servers suffered disk failures. The applications running on the servers did not have any apparent service disruptions. What feature of Compute Engine enabled that?
+A. Preemptible VMs
+B. Live migration
+C. Canary deployments
+D. Redundant array of inexpensive disks
+4. B. The correct answer is B, Live Migration, which moves running VMs to different physical servers without interrupting the state of the VM. Option A is incorrect because preemptible VMs are low-cost VMs that may be taken back by Google at any time. Option C is incorrect, as canary deployments are a type of deployment—not a feature of Compute Engine. Option D is incorrect, as arrays of disks are not directly involved in preserving the state of a VM and moving the VM to a functioning physical server.
+
+You have deployed an application on an instance group. The application is not functioning correctly. What is a possible outcome?
+A. The application shuts down when the instance group time-to-live (TTL) threshold is reached.
+B. The application shuts down when the health check fails.
+C. The VM shuts down when the instance group TTL threshold is reached and a new VM is started.
+D. The VM shuts down when the health check fails and a new VM is started.
+5. D. Option D is correct. When a health check fails, the failing VM is replaced by a new VM that is created using the instance group template to configure the new VM. Options A and C are incorrect, as TTL is not used to detect problems with application functioning. Option B is incorrect because the application is not shut down when a health check fails.
+
+Mountkirk Games is growing its user base in North America, Europe, and Asia. Executives are concerned that players in Europe and Asia will have a degraded experience if the game backend runs only in North America. What would you suggest as a way to improve latency and game experience for users in Europe and Asia?
+A. Use Cloud Spanner to have a globally consistent, horizontally scalable relational database.
+B. Create instance groups running the game backend in multiple regions across North America, Europe, and Asia. Use global load balancing to distribute the workload.
+C. Use Standard Tier networking to ensure that data sent between regions is routed over the public Internet.
+D. Use a Cloud Memorystore cache in front of the database to reduce database read latency.
+6. B. The correct answer is B. Creating instance groups in multiple regions and routing workload to the closest region using global load balancing will provide the most consistent experience for users in different geographic regions. Option A is incorrect because Cloud Spanner is a relational database and does not affect how game backend services are run except for database operations. Option C is incorrect, as routing traffic over the public Internet means traffic will experience the variance of public Internet routes between regions. Option D is incorrect. A cache will reduce the time needed to read data, but it will not affect network latency when that data is transmitted from a game backend to the player’s device.
+
+What configuration changes are required to ensure high availability when using Cloud Storage or Cloud Filestore?
+A. A sufficiently long TTL must be set.
+B. A health check must be specified.
+C. Both a TTL and health check must be specified.
+D. Nothing. Both are managed services. GCP manages high availability.
+7. D. The correct answer is D. Users do not need to make any configuration changes when using Cloud Storage or Cloud Filestore. Both are fully managed services. Options A and C are incorrect because TTLs do not need to be set to ensure high availability. Options B and C are incorrect because users do not need to specify a health check for managed storage services.
+
+The finance director in your company is frustrated with the poor availability of an on-premises finance data warehouse. The data warehouse uses a commercial relational database that only scales by buying larger and larger servers. The director asks for your advice about moving the data warehouse to the cloud and if the company can continue to use SQL to query the data warehouse. What GCP service would you recommend to replace the on-premises data warehouse?
+A. Bigtable
+B. BigQuery
+C. Cloud Datastore
+D. Cloud Storage
+8. B. The best answer is B. BigQuery is a serverless, fully managed analytic database that uses SQL for querying. Options A and C are incorrect because both Bigtable and Cloud Datastore are NoSQL databases. Option D, Cloud Storage, is not a database, and it does not meet most of the requirements listed.
+
+TerramEarth has determined that it wants to use Cloud Bigtable to store equipment telemetry data transmitted over their cellular network. They have also concluded that they want two clusters in different regions. Both clusters should be able to respond to read and write requests. What kind of replication should be used?
+A. Primary–hot primary
+B. Primary–warm primary
+C. Primary–primary
+D. Primary read–primary write
+9. C. The correct answer is C. Primary-primary replication keeps both clusters synchronized with write operations so that both clusters can respond to queries. Options A, B, and D are not actual replication options.
+
+Your company is implementing a hybrid cloud computing model. Line-of-business owners are concerned that data stored in the cloud may not be available to on-premises applications. The current network connection is using a maximum of 40 percent of bandwidth. What would you suggest to mitigate the risk of that kind of service failure?
+A. Configure firewall rules to improve availability.
+B. Use redundant network connections between the on-premises data center and Google Cloud.
+C. Increase the number of VMs allowed in Compute Engine instance groups.
+D. Increase the bandwidth of the network connection between the data center and Google Cloud.
+10. B. Option B is correct. A redundant network connection would mitigate the risk of losing connectivity if a single network connection went down. Option A is incorrect, as firewall rules are a security control and would not mitigate the risk of network connectivity failures. Option C may help with compute availability, but it does not improve network availability. Option D does not improve availability, and additional bandwidth is not needed.
+
+A team of architects in your company is defining standards to improve availability. Inaddition to recommending redundancy and code reviews for configuration changes, what would you recommend to include in the standards?
+A. Use of access controls
+B. Use of managed services for all compute requirements
+C. Use of Stackdriver monitoring to alert on changes in application performance
+D. Use of Bigtable to collect performance monitoring data
+11. C. The correct answer is C. Stackdriver should be used to monitor applications and infrastructure to detect early warning signs of potential problems with applications or infrastructure. Option A is incorrect because access controls are a security control and not related to directly improving availability. Option B is incorrect because managed services may not meet all requirements and so should not be required in a company’s standards. Option D is incorrect because collecting and storing performance monitoring data does not improve availability.
+
+Why would you want to run long-running, compute-intensive backend computation in a different managed instance group than on web servers supporting a minimal user interface?
+A. Managed instance groups can run only a single application.
+B. Managed instance groups are optimized for either compute or HTTP connectivity.
+C. Compute-intensive applications have different scaling characteristics from those of lightweight user interface applications.
+D. There is no reason to run the applications in different managed instance groups.
+12. C. The correct answer is C. The two applications have different scaling requirements. The compute-intensive backend may benefit from VMs with a large number of CPUs that would not be needed for web serving. Also, the frontend may be able to reduce the number of instances when users are not actively using the user interface, but long compute jobs may still be running in the background. Options A and B are false statements. Option D is incorrect for the reasons explained in reference to Option C.
+
+An instance group is adding more VMs than necessary and then shutting them down. This pattern is happening repeatedly. What would you do to try to stabilize the addition and removal of VMs?
+A. Increase the maximum number of VMs in the instance group.
+B. Decrease the minimum number of VMs in the instance group.
+C. Increase the time autoscalers consider when making decisions.
+D. Decrease the time autoscalers consider when making decisions.
+13. C. The correct answer is C. The autoscaler may be adding VMs because it has not waited long enough for recently added VMs to start and begin to take on load. Options A and B are incorrect because changing the minimum and maximum number of VMs in the group does not affect the rate at which VMs are added or removed. Option D is incorrect because it reduces the time available for new instances to start taking on workload, so it may actually make the problem worse.
+
+Dress4Win has just developed a new feature for its social networking service. Customers can upload images of their clothes, create montages from those images, and share them on social networking sites. Images are temporarily saved to locally attached drives as the customer works on the montage. When the montage is complete, the final version is copied to a Cloud Storage bucket. The services implementing this feature run in a managed instance group. Several users have noted that their final montages are not available even though they saved them in the application. No other problems have been reported with the service. What might be causing this problem?
+A. The Cloud Storage bucket is out of storage.
+B. The locally attached drive does not have a filesystem.
+C. The users experiencing the problem were using a VM that was shut down by an autoscaler, and a cleanup script did not run to copy the latest version of the montage to Cloud Storage.
+D. The network connectivity between the VMs and Cloud Storage has failed.
+14. C. The correct answer is C. If the server is shut down without a cleanup script, then data that would otherwise be copied to Cloud Storage could be lost when the VM shuts down. Option A is incorrect because buckets do not have a fixed amount of storage. Option B is incorrect because, if it were true, the service would not function for all users—not just several of them. Option D is incorrect because if there was a connectivity failure between the VM and Cloud Storage, there would be more symptoms of such a failure.
+
+Kubernetes uses several abstractions to model and manage computation and applications. What is the progression of abstractions from the lowest to the highest level ?
+A. Pods → Deployments → Services
+B. Pods → Services → Deployments
+C. Deployments → Services → Pods
+D. Deployments → Pods → Services
+15. A. The correct answer is A. Pods are the lowest level of the computation abstractions. Deployments are collections of pods running a version of an application. Services are sets of deployments running an application, possibly with multiple versions running in different deployments. Options B, C, and D are all incorrect in the order of progression from lowest to highest level of abstraction.
+
+Your development team has implemented a new application using a microservices architecture. You would like to minimize DevOps overhead by deploying the services in a way that will autoscale. You would also like to run each microservice in containers. What is a good option for implementing these requirements in Google Cloud Platform?
+A. Run the containers in Cloud Functions.
+B. Run the containers in Kubernetes Engine.
+C. Run the containers in Cloud Dataproc.
+D. Run the containers in Cloud Dataflow.
+16. B. The correct answer is B. The requirements are satisfied by the Kubernetes container orchestration capabilities. Option A is incorrect, as Cloud Functions do not run containers. Option C is incorrect because Cloud Dataproc is a managed service for Hadoop and Spark. Option D is incorrect, as Cloud Dataflow is a managed service for stream and batch processing using the Apache Beam model.
+
+TerramEarth is considering building an analytics database and making it available to equipment designers. The designers require the ability to query the data with SQL. The analytics database manager wants to minimize the cost of the service. What would you recommend?
+A. Use BigQuery as the analytics database, and partition the data to minimize the amount of data scanned to answer queries.
+B. Use Bigtable as the analytics database, and partition the data to minimize the amount of data scanned to answer queries.
+C. Use BigQuery as the analytics database, and use data federation to minimize the amount of data scanned to answer queries.
+D. Use Bigtable as the analytics database, and use data federation to minimize the amount of data scanned to answer queries.
+17. A. The correct answer is A. BigQuery should be used for an analytics database. Partitioning allows the query processor to limit scans to partitions that might have the data selected in a query. Options B and D are incorrect because Bigtable does not support SQL. Options C and D are incorrect because federation is a way of making data from other sources available within a database—it does not limit the data scanned in the way that partitioning does.
+
+Line-of-business owners have decided to move several applications to the cloud. They believe the cloud will be more reliable, but they want to collect data to test their hypothesis. What is a common measure of reliability that they can use?
+A. Mean time to recovery
+B. Mean time between failures
+C. Mean time between deployments
+D. Mean time between errors
+18. B. The correct answer is B. Mean time between failures is a measure of reliability. Option A is a measure of how long it takes to recover from a disruption. Options C and D are incorrect because the time between deployments or errors is not directly related to reliability.
+
+A group of business executives and software engineers are discussing the level of risk that is acceptable for a new application. Business executives want to minimize the risk that the service is not available. Software engineers note that the more developer time dedicated to reducing risk of disruption, the less time they have to implement new features. How can you formalize the group’s tolerance for risk of disruption?
+A. Request success rate
+B. Uptime of service
+C. Latency
+D. Throughput
+19. A. The correct answer is A. Request success rate is a measure of how many requests were successfully satisfied. Option B is incorrect because at least some instances of an application may be up at any time, so it does not reflect the capacity available. Options C and D are not relevant measures of risk.
+
+Your DevOps team recently determined that it needed to increase the size of persistent disks used by VMs running a business-critical application. When scaling up the size of available persistent storage for a VM, what other step may be required?
+A. Adjusting the filesystem size in the operating system
+B. Backing up the persistent disk before changing its size
+C. Changing the access controls on files on the disk
+D. Update disk metadata, including labels
+20. A. The correct answer is A. The persistent storage may be increased in size, but the operating system may need to be configured to use that additional storage. Option B is incorrect because while backing up a disk before operating on it is a good practice, it is not required. Option C is incorrect because changing storage size does not change access control rules. Option D is incorrect because any disk metadata that needs to change when the size changes is updated by the resize process.

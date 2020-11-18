@@ -1,0 +1,104 @@
+Your midsize company has decided to assess the possibility of moving some or all of its enterprise applications to the cloud. As the CTO, you have been tasked with determining how much it would cost and what the benefits of a cloud migration would be. What would you do first?
+A. Take inventory of applications and infrastructure, document dependencies, and identify compliance and licensing issues.
+B. Create a request for proposal from cloud vendors.
+C. Discuss cloud licensing issues with enterprise software vendors.
+D. Interview department leaders to identify their top business pain points.
+1. A. The correct answer is A. Before migrating to the cloud, one of the first steps is understanding your own infrastructure, dependencies, compliance issues, and licensing structure. Option B is incorrect. Without an understanding of what you want from a cloud vendor, it is not possible to create a request for proposal. Option C is incorrect. It is too early to discuss licensing if you don’t understand your current licensing situation and what licensing you want to have in the cloud. Option D is incorrect. It is a reasonable thing to do as a CTO, but it is too broad of a topic, and instead discussions should be focused on IT-related pain points.
+
+You are working with a colleague on a cloud migration plan. Your colleague would like to start migrating data. You have completed an assessment but no other preparation work. What would you recommend before migrating data?
+A. Migrating applications
+B. Conducting a pilot project
+C. Migrating all identities and access controls
+D. Redesigning relational data models for optimal performance
+2. B. The correct answer is B. Conducting a pilot project will provide an opportunity to learn about the cloud environment. Option A is incorrect, as applications should be migrated after data. Option C is incorrect. There is no need to migrate all identities and access controls until you understand which identities will need particular roles in the cloud. Option D is incorrect. There is no reason given that would warrant redesigning a relational database as part of the migration.
+
+As the CTO of your company, you are responsible for approving a cloud migration plan for services that include a wide range of data. You are reviewing a proposed plan than includes an assessment, pilot project, data migration, application migration, and optimization. What should you look for as part of the data migration plan?
+A. Database reconfiguration data
+B. Firewall rules to protect databases
+C. An assessment of data classification and regulations relevant to the data to be migrated
+D. A detailed description of current backup operations
+3. C. The correct answer is C. You should be looking for a recognition that data classification and regulation needs to be considered and addressed. Option A is incorrect. Database and network administrators will manage database configuration details when additional information on database implementations are known. Option B is incorrect. It is not necessary to specify firewall rules at this stage, since the plan has not been approved. Option D is incorrect. Current backup operations are not relevant to the migration plan any more than any other routine operational procedures.
+
+A client of yours is prioritizing applications to move to the cloud. One system written in Java is a Tier 1 production system that must be available 24/7; it depends on three Tier 2 services that are running on-premises, and two other Tier 1 applications depend on it. Which of these factors is least important from a risk assessment perspective?
+A. The application is written in Java.
+B. The application must be available 24/7.
+C. The application depends on three Tier 2 services.
+D. Two other Tier 1 applications depend on it.
+4. A. The correct answer is A. Java is a widely used, widely supported language for developing a range of applications, including enterprise applications. There is little risk moving a Java application from an on-premises platform to the cloud. All other options are considerable factors in assessing the risk of moving the application.
+
+As part of a cloud migration, you will be migrating a relational database to the cloud. The database has strict SLAs, and it should not be down for more than a few seconds a month. The data stores approximately 500 GB of data, and your network has 100 Gbps bandwidth. What method would you consider first to migrate this database to the cloud?
+A. Use a third-party backup and restore application.
+B. Use the MySQL data export program, and copy the export file to the cloud.
+C. Set up a replica of the database in the cloud, synchronize the data, and then switch traffic to the instance in the cloud.
+D. Transfer the data using the Google Transfer Appliance.
+5. C. The correct answer is C. Because of the strict SLAs, the database should not be down as long as would be required if a MySQL export were used. Option A and Option B would leave the database unavailable longer than allowed or needed. Option D is not needed because of the small data volume, and it would require the database to be down longer than allowed by the SLA.
+
+Your company is running several third-party enterprise applications. You are reviewing the licenses and find that they are transferrable to the cloud, so you plan to take advantage of that option. This form of licensing is known as which one of the following?
+A. Compliant licensing
+B. Bring-your-own license
+C. Pay-as-you-go license
+D. Metered pricing
+6. B. The correct answer is B. This is an example of bring your own license. Option A is a fictitious term. Options C and D both refer to pay based on usage in the cloud.
+
+Your company is running several third-party enterprise applications. You are reviewing the licenses and find that they are not transferrable to the cloud. You research your options and see that the vendor offers an option to pay a licensing fee based on how long you use the application in the cloud. What is this option called?
+A. Compliant licensing
+B. Bring-your-own license
+C. Pay-as-you-go license
+D. Incremental payment licensing
+7. C. The correct answer is C. This is an example of pay-as-you-go licensing. Options A and D are fictitious terms. Option B is incorrect. You are not using a license that you own in this scenario.
+
+You have been asked to brief executives on the networking aspects of the cloud migration. You want to begin at the highest level of abstraction and then drill down into lower-level components. What topic would you start with?
+A. Routes
+B. Firewalls
+C. VPCs
+D. VPNs
+8. C. The correct answer is C. VPCs are the highest networking abstraction and constitute a collection of network components. Options A, B, and C are wrong because they are lowerlevel components within a VPC.
+
+You have created a VPC in Google Cloud, and subnets were created automatically. What range of IP addresses would you not expect to see in use with the subnets?
+A. 10.0.0.0 to 10.255.255.255
+B. 72.16.0.0 to 172.31.255.255
+C. 192.168.0.0 to 192.168.255.255
+D. 201.1.1.0 to 201.2.1.0
+9. D. The correct answer is D. It is not an RFC 1918 private address, which is within the address ranges used with subnets. Options A, B, and C are all incorrect because they are private address ranges and may be used with subnets.
+
+A network engineer is helping you plan connectivity between your on-premises network and Google Cloud. The engineer estimates that you will need 6 Gbps of bandwidth in total between the on-premises data center and Google Cloud. The traffic may be split between multiple connections. How many VPN endpoints will you need?
+A. 1
+B. 2
+C. 3
+D. 6
+10. B. The correct answer is B because each VPN endpoint supports up to 3 Gbps, so two will be sufficient. Option A is incorrect. That would provide only half of the needed bandwidth. Options C and D are incorrect because, although they would have sufficient bandwidth, they would cost more and there is no business justification for the additional cost.
+
+During migration planning, you learn that traffic to the subnet containing a set of databases must be restricted. What mechanism would you plan to use to control the flow of traffic to a subnet?
+A. IAM roles
+B. Firewall rules
+C. VPNs
+D. VPCs
+11. B. The correct answer is B. Firewall rules are used to control the flow of traffic. Option A is incorrect because IAM roles are used to assign permissions to identities, such as users or service accounts. Option C is incorrect. A VPN is a network link between Google Cloud and on-premises networks. Option D is incorrect. VPCs are high-level abstractions grouping lower-level network components.
+
+During migration planning, you learn that some members of the network management team will need the ability to manage all network components, but others on the team will only need read access to the state of the network. What mechanism would you plan to use to control the user access?
+A. IAM roles
+B. Firewall rules
+C. VPNs
+D. VPCs
+12. A. The correct answer is A. IAM roles are used to assign permissions to identities, such as users or service accounts. These permissions are assigned to roles which are assigned to users. Option B is incorrect. Firewall rules are used to control the flow of traffic between subnets. Option C is incorrect. A VPN is a network link between the Google Cloud and onpremises networks. Option D is incorrect. VPCs are high-level abstractions grouping lowerlevel network components.
+
+Executives in your company have decided that the company should not route its GCP-only traffic over public internet networks. What Google Cloud service would you plan to use to distribute the workload of an enterprise application?
+A. Global load balancing
+B. Simple network management protocol
+C. Content delivery network
+D. VPNs
+13. A. The correct answer is A. Global load balancing is the service that would route traffic to the nearest healthy instance using Premium Network Tier. Option B is incorrect. SNMP is a management protocol, and it does not enable global routing. Options C and D are wrong because they are network services but do not enable global routing.
+
+Executives in your company have decided to expand operations from just North America to Europe as well. Applications will be run in several regions. All users should be routed to the nearest healthy server running the application they need. What Google Cloud service would you plan to use to meet this requirement?
+A. Global load balancing
+B. Cloud Interconnect
+C. Content delivery network
+D. VPNs
+14. A. The correct answer is A, global load balancing will route traffic to the nearest healthy instance. Option B is incorrect, Cloud Interconnect is a way to implement hybrid computing. Option C is incorrect. Content delivery networks are used to distribute content in order to reduce latency when delivering that content. Option D is incorrect. VPNs link onpremises data centers to the Google Cloud.
+
+Executives in your company have decided that the company should expand its service offerings to a global market. You company distributes education content online. Maintaining low latency is a top concern. What type of network service would you expect to use to ensure low-latency access to content from around the globe?
+A. Routes
+B. Firewall rules
+C. Content delivery network
+D. VPNs
+15. C. The correct answer is C. A content delivery network would be used to distribute video content globally to reduce network latency. Option A is incorrect. Routes are used to control traffic flow and are not directly related to reducing latency of content delivery, although a poorly configured set of routes could cause unnecessarily long latencies. Option B is incorrect. Firewalls will not reduce latency. Option D is incorrect because VPNs are used to link on-premises data centers to the Google Cloud.

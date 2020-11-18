@@ -1,0 +1,104 @@
+A team of early career software engineers has been paired with an architect to work on a new software development project. The engineers are anxious to get started coding, but the architect objects to that course of action because there has been insufficient work prior to development. What steps should be completed before beginning development according to SDLC?
+A. Business continuity planning
+B. Analysis and design
+C. Analysis and testing
+D. Analysis and documentation
+1. B. The correct answer is B. Analysis defines the scope of the problem and assessing options for solving the problem. Design produces high-level and detailed plans that guide development. Option A is incorrect, as business continuity planning is not required before development, though it can occur alongside development. Option C is incorrect because testing occurs after software is developed. Similarly, option D is incorrect because documentation comes after development as well.
+
+In an analysis meeting, a business executive asks about research into COTS. What is this executive asking about?
+A. Research related to deciding to build versus buying a solution
+B. Research about a Java object relational mapper
+C. A disaster planning protocol
+D. Research related to continuous operations through storms (COTS), a business continuity practice
+2. A. The correct answer is A. COTS stands for commercial off-the-shelf software, so the question is about research related to the question of buy versus build. Option B is incorrect, as COTS is not an ORM. Options C and D are both incorrect. COTS is not about business continuity or disaster recovery.
+
+Business decision-makers have created a budget for software development over the next three months. There are more projects proposed than can be funded. What measure might the decision-makers use to choose projects to fund?
+A. Mean time between failures (MTBF)
+B. Recovery time objectives (RTO)
+C. Return on investment (ROI)
+D. Marginal cost displacement
+3. C. Option C is correct. ROI is a measure used to compare the relative value of different investments. Option A is a measure of reliability and availability. Option B is a requirement related to disaster recovery. Option D is a fictitious measure.
+
+A team of developers is working on a backend service to implement a new business process. They are debating whether to use arrays, lists, or hash maps. In what stage of the SDLC are these developers at present?
+A. Analysis
+B. High-level design
+C. Detailed design
+D. Maintenance
+4. C. The correct answer is C because questions of data structure are not usually addressed until the detail design stage. Option A is incorrect, as analysis is about scoping a problem and choosing a solution approach. Option B is incorrect because high-level design is dedicated to identifying subcomponents and how they function together. Option D is incorrect because the maintenance phase is about keeping software functioning.
+
+An engineer is on call for any service-related issues with a service. In the middle of the night, the engineer receives a notification that a set of APIs is returning HTTP 500 error codes to most requests. What kind of documentation would the engineer turn to first?
+A. Design documentation
+B. User documentation
+C. Operations documentation
+D. Developer documentation
+5. C. The correct answer is C. In the middle of the night the primary goal is to get the service functioning properly. Operations documentation, like runbooks, provide guidance on how to start services and correct problems. Option A is incorrect because design documentation may describe why design decisions were made—it does not contain distilled information about running the service. Option B is incorrect, as user documentation is for customers of the service. Option D is incorrect because, although developer documentation may eventually help the engineer understand the reason why the service failed, it is not the best option for finding specific guidance on getting the service to function normally.
+
+As a developer, you write code in your local environment, and after testing it, you commit it or write it to a version control system. From there it is automatically incorporated with the baseline version of code in the repository. What is the process called?
+A. Software continuity planning
+B. Continuous integration (CI)
+C. Continuous development (CD)
+D. Software development lifecycle (SDLC)
+6. B. The correct answer is B. This is an example of continuous integration because code is automatically merged with the baseline application code. Option A is not an actual process. Option C is not an actual process, and it should not be confused with continual deployment. Option D is incorrect because the software development lifecycle includes continuous integration and much more.
+
+As a consulting architect, you have been asked to help improve the reliability of a distributed system with a large number of custom microservices and dependencies on third-party APIs running in a hybrid cloud architecture. You have decided that at this level of complexity, you can learn more by experimenting with the system than by studying documents and code listings. So, you start by randomly shutting down servers and simulating network partitions. This is an example of what practice?
+A. Irresponsible behavior
+B. Integration testing
+C. Load testing
+D. Chaos engineering
+7. D. The correct answer is D. This is an example of chaos engineering. Netflix’s Simian Army is a collection of tools that support chaos engineering. Option A is incorrect because this is a reasonable approach to improving reliability, assuming that the practice is transparent and coordinated with others responsible for the system. Option B is incorrect. This is not a test to ensure that components work together. It is an experiment to see what happens when some components do not work. Option C is incorrect. This does test the ability of the system to process increasingly demanding workloads.
+
+There has been a security breach at your company. A malicious actor outside of your company has gained access to one of your services and was able to capture data that was passed into the service from clients. Analysis of the incident finds that a developer included a private key in a configuration file that was uploaded to a version control repository. The repository is protected by several defensive measures, including role-based access controls and network-level controls that require VPN access to reach the repository. As part of backup procedures, the repository is backed up to a cloud storage service. The folder that stores the backup was mistakenly granted public access privileges for up to three weeks before the error was detected and corrected. During the post-mortem analysis of this incident, one of the objectives should be to
+A. Identify the developer who uploaded the private key to a version control repository. They are responsible for this incident.
+B. Identify the system administrator who backed up the repository to an unsecured storage service. They are responsible for this incident.
+C. Identify the system administrator who misconfigured the storage system. They are responsible for this incident.
+D. Identify ways to better scan code checked into the repository for sensitive information and perform checks on cloud storage systems to identify weak access controls.
+8. D. The correct answer is D. The goal of the post-mortem is to learn how to prevent this kind of incident again. Options A, B, and C are all wrong because they focus on blaming a single individual for an incident that occurred because of multiple factors. Also, laying blame does not contribute to finding a solution. In cases where an individual’s negligence or lack of knowledge is a significant contributing factor, then other management processes should be used to address the problem. Post-mortems exist to learn and to correct technical processes.
+
+You have just been hired as a cloud architect for a large financial institution with global reach. The company is highly regulated, but it has a reputation for being able to manage IT projects well. What practices would you expect to find in use at the enterprise level that you might not find at a startup?
+A. Agile methodologies
+B. SDLC
+C. ITIL
+D. Business continuity planning
+9. C. The correct answer is C. ITIL is a set of enterprise IT practices for managing the full range of IT processes, from planning and development to security and support. Options A and B are likely to be found in all well-run software development teams. Option D may not be used at many startups, but it should be.
+
+A software engineer asks for an explanation of the difference between business continuity planning and DR planning. What would you say is the difference?
+A. There is no difference; the terms are synonymous.
+B. They are two unrelated practices.
+C. DR is a part of business continuity planning, which includes other practices for continuing business operations in the event of an enterprise-level disruption of services.
+D. Business continuity planning is a subset of disaster recovery.
+10. C. The correct answer is C. Disaster recovery is a part of business continuity planning. Options A and B are wrong. They are neither the same nor are they unrelated. Option D is incorrect because it has the relationship backward.
+
+In addition to ITIL, there are other enterprise IT process management frameworks. Which other standard might you reference when working on enterprise IT management issues?
+A. ISO/ICE 20000
+B. Java Coding Standards
+C. PEP-8
+D. ISO/IEC 27002
+11. A. The correct answer is A. ISO/IEC 20000 is a service management standard. Options B and C are incorrect. They are programming language–specific standards for Java and Python, respectively. Option D is incorrect. ISO/IEC 27002 is a security standard, although you may reference it for security-related practices.
+
+A minor problem repeatedly occurs with several instances of an application that causes a slight increase in the rate of errors returned. Users who retry the operation usually succeed on the second or third attempt. By your company’s standards, this is considered a minor incident. Should you investigate this problem?
+A. No. The problem is usually resolved when users retry.
+B. No. New feature requests are more important.
+C. Yes. But only investigate if the engineering manager insists.
+D. Yes. Since it is a recurring problem, there may be an underlying bug in code or weakness in the design that should be corrected.
+12. D. The correct answer is D. There may be an underlying bug in code or weakness in the design that should be corrected. Options A and B are incorrect because it should be addressed, since it adversely impacts customers. Option C is incorrect because software engineers and architects can recognize a customer-impacting flaw and correct it.
+
+A CTO of a midsize company hires you to consult on the company’s IT practices. During preliminary interviews, you realize that the company does not have a business continuity plan. What would you recommend they develop first with regards to business continuity?
+A. Recovery time objectives (RTO)
+B. An insurance plan
+C. A disaster plan
+D. A service management plan
+13. C. The correct answer is C. A disaster plan documents a strategy for responding to a disaster. It includes information such as where operations will be established, which services are the highest priority, what personnel are considered vital to recovery operations, as well as plans for dealing with insurance carriers and maintaining relations with suppliers and customers. Option A is incorrect. Recovery time objectives cannot be set until the details of the recovery plan are determined. Option B is incorrect because you cannot decide what risk to transfer to an insurance company before understanding what the risks and recovery objectives are. Option D is incorrect. A service management plan is part of an enterprise IT process structure.
+
+A developer codes a new algorithm and tests it locally. They then check the code into the team’s version control repository. This triggers an automatic set of unit and integration tests. The code passes, and it is integrated into the baseline code and included in the next build. The build is released and runs as expected for 30 minutes. A sudden spike in traffic causes the new code to generate a large number of errors. What might the team decide to do after the post-mortem analysis of this incident?
+A. Fire the developer who wrote the algorithm
+B. Have at least two engineers review all of the code before it is released
+C. Perform stress tests on changes to code that may be sensitive to changes in load
+D. Ask the engineering manager to provide additional training to the engineer who revised the algorithm
+14. C. The correct answer is C. Option A is not correct because blaming engineers and immediately imposing severe consequences is counterproductive. It will tend to foster an environment that is not compatible with agile development practices. Option B is incorrect because this could be highly costly in terms of engineers’ time, and it is unlikely to find subtle bugs related to the complex interaction of multiple components in a distributed system. Option D is incorrect because, while additional training may be part of the solution, that is for the manager to decide. Post-mortems should be blameless, and suggesting that someone be specifically targeted for additional training in a post-mortem implies some level of blame.
+
+Your company’s services are experiencing a high level of errors. Data ingest rates are dropping rapidly. Your data center is located in an area prone to hurricanes, and these events are occurring during peak hurricane season. What criteria do you use to decide to invoke your disaster recovery plan?
+A. When your engineering manager says to invoke the disaster recovery plan
+B. When the business owner of the service says to invoke the disaster recovery plan
+C. When the disaster plan criteria for invoking the disaster recovery plan are met
+D. When the engineer on call says to invoke the disaster recovery plan
+15. C. The correct answer is C. The criteria for determining when to invoke the disaster recovery plan should be defined before a team might have to deal with a disaster. Options A, B, and C are all incorrect because the decision should not be left to the sole discretion of an individual manager, service owner, or engineer. A company policy should be in place for determining when to invoke a DR plan.

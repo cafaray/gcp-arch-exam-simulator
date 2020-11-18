@@ -1,0 +1,104 @@
+You have been tasked with interviewing line-of-business owners about their needs for a new cloud application. Which of the following do you expect to find?
+A. A comprehensive list of defined business and technical requirements
+B. That their business requirements do not have a one-to-one correlation with technical requirements
+C. Business and technical requirements in conflict
+D. Clear consensus on all requirements
+1. B. The correct answer is B. Business requirements are high-level, business-oriented requirements that are rarely satisfied by meeting a single technical requirement. Option A is incorrect because business sponsors rarely have sufficient understanding of technical requirements in order to provide a comprehensive list. Option C is incorrect, because business requirements constrain technical options but should not be in conflict. Option D is incorrect because there is rarely a clear consensus on all requirements. Part of an architect’s job is to help stakeholders reach a consensus.
+
+You have been asked by stakeholders to suggest ways to reduce operational expenses as part of a cloud migration project. Which of the following would you recommend?
+A. Managed services, preemptible machines, access controls
+B. Managed services, preemptible machines, autoscaling
+C. NoSQL databases, preemptible machines, autoscaling
+D. NoSQL databases, preemptible machines, access controls
+2. B. The correct answer is B. Managed services relieve DevOps work, preemptible machines cost significantly less than standard VMs, and autoscaling reduces the chances of running unnecessary resources. Options A and D are incorrect because access controls will not help reduce costs, but they should be used anyway. Options C and D are incorrect because there is no indication that a NoSQL database should be used.
+
+Some executives are questioning your recommendation to employ continuous integration/ continuous deployment (CI/CD). What reasons would you give to justify your recommendation?
+A. CI/CD supports small releases, which are easier to debug and enable faster feedback.
+B. CI/CD is used only with preemptible machines and therefore saves money.
+C. CI/CD fits well with waterfall methodology but not agile methodologies.
+D. CI/CD limits the number of times code is released.
+3. A. The correct answer is A. CI/CD supports small releases, which are easier to debug and enable faster feedback. Option B is incorrect, as CI/CD does not only use preemptible machines. Option C is incorrect because CI/CD works well with agile methodologies. Option D is incorrect, as there is no limit to the number of times new versions of code can be released.
+
+The finance director has asked your advice about complying with a document retention regulation. What kind of service-level objective (SLO) would you recommend to ensure that the finance director will be able to retrieve sensitive documents for at least the next seven years? When a document is needed, the finance director will have up to seven days to retrieve it. The total storage required will be approximately 100 GB.
+A. High availability SLO
+B. Durability SLO
+C. Reliability SLO
+D. Scalability SLO
+4. B. The correct answer is B. The finance director needs to have access to documents for seven years. This requires durable storage. Option A is incorrect because the access does not have to be highly available; as long as the finance director can access the document in a reasonable period of time, the requirement can be met. Option C is incorrect because reliability is a measure of being available to meet workload demands successfully. Option D is incorrect because the requirement does not specify the need for increasing and decreasing storage to meet the requirement.
+
+You are facilitating a meeting of business and technical managers to solicit requirements for a cloud migration project. The term incident comes up several times. Some of the business managers are unfamiliar with this term in the context of IT. How would you describe an incident?
+A. A disruption in the ability of a DevOps team to complete work on time
+B. A disruption in the ability of the business managers to approve a project plan on schedule
+C. A disruption that causes a service to be degraded or unavailable
+D. A personnel problem on the DevOps team
+5. C. The correct answer is C. An incident in the context of IT operations and service reliability is a disruption that degrades or stops a service from functioning. Options A and B are incorrect—incidents are not related to scheduling. Option D is incorrect; in this context, incidents are about IT services, not personnel.
+
+You have been asked to consult on a cloud migration project that includes moving private medical information to a storage system in the cloud. The project is for a company in the United States. What regulation would you suggest that the team review during the requirements-gathering stages?
+A. General Data Protection Regulations (GDPR)
+B. Sarbanes–Oxley (SOX)
+C. Payment Card Industry Data Security Standard (PCI DSS)
+D. Health Insurance Portability and Accountability Act (HIPAA)
+6. D. The correct answer is D. HIPAA governs, among other things, privacy and data protections for private medical information. Option A is incorrect, as GDPR is a European Union regulation. Option B is incorrect, as SOX is a U.S. financial reporting regulation. Option C is incorrect, as PCI DSS is a payment card industry regulation.
+
+You are in the early stages of gathering business and technical requirements. You have noticed several references about needing up-to-date and consistent information regarding product inventory. Inventory is managed on a global scale, and the warehouses storing inventory are located in North America, Africa, Europe, and India. Which managed database solution in Google Cloud would you include in your set of options for an inventory database?
+A. Cloud Storage
+B. BigQuery
+C. Cloud Spanner
+D. Microsoft SQL Server
+7. C. The correct answer is C. Cloud Spanner is a globally consistent, horizontally scalable relational database. Option A is incorrect. Cloud Storage is not a database; rather, it is an object storage system. Option B is incorrect because BigQuery is an analytics database. Option D is incorrect, as Microsoft SQL Server is not a managed database in Google Cloud.
+
+A developer at Mountkirk Games is interested in how architects decide which database to use. The developer describes a use case that requires a document store. The developer would rather not manage database servers or have to run backups. What managed service would you suggest the developer consider?
+A. Cloud Datastore
+B. Cloud Spanner
+C. Cloud Storage
+D. BigQuery
+8. A. The correct answer is A. Cloud Datastore is a managed document database and a good fit for storing documents. Option B is incorrect because Cloud Spanner is a relational database and globally scalable. There is no indication that the developer needs a globally scalable solution. Option C is incorrect, as Cloud Storage is an object storage system, not a managed database. Option D is incorrect because BigQuery is an analytic database designed for data warehousing and similar applications.
+
+Members of your company’s legal team are concerned about using a public cloud service because other companies, organizations, and individuals will be running their systems in the same cloud. You assure them that your company’s resources will be isolated and not network-accessible to others because of what networking resource in Google Cloud?
+A. CIDR blocks
+B. Direct connections
+C. Virtual private clouds
+D. Cloud Pub/Sub
+9. C. The correct answer is C. VPCs isolate cloud resources from resources in other VPCs, unless VPCs are intentionally linked. Option A is incorrect because a CIDR block has to do with subnet IP addresses. Option B is incorrect, as direct connections are for transmitting data between a data center and Google Cloud—it does not protect resources in the cloud. Option D is incorrect because Cloud Pub/Sub is a messaging service, not a networking service.
+
+What two business drivers are behind Dress4Win’s interest in moving to the cloud?
+A. Insufficient infrastructure capacity and desire to be more agile
+B. Insufficient infrastructure and competitors moving to the cloud
+C. Competitors moving to the cloud and desire to be more agile
+D. Insufficient infrastructure and short-term cost savings
+10. A. The correct answer is A. Dress4Win is at capacity with its existing infrastructure and wants to innovate faster. Options B and C are incorrect because the decision is not influenced by competitors moving to the cloud. Option D is incorrect because short-term cost savings are not a consideration.
+
+Dress4Win is considering replacing its self-managed MySQL database with a managed service. Which Google Cloud service would you recommend that they consider?
+A. Cloud Dataproc
+B. Cloud Dataflow
+C. Cloud SQL
+D. PostgreSQL
+11. C. The correct answer is C. Cloud SQL offers a managed MySQL service. Options A and B are incorrect, as neither is a database. Cloud Dataproc is a managed Hadoop and Spark service. Cloud Dataflow is a stream and batch processing service. Option D is incorrect, because PostgreSQL is another relational database, but it is not a managed service. PostgreSQL is an option in Cloud SQL, however.
+
+Which of the following requirements from a customer makes you think the application should run in Compute Engine and not App Engine?
+A. Dynamically scale up or down based on game activity
+B. Connect to a database
+C. Run a hardened Linux distro on a virtual machine
+D. Don’t lose data
+12. C. The correct answer is C. In Compute Engine, you create virtual machines and choose which operating system to run. All other requirements can be realized in App Engine.
+
+Consider the TerramEarth case study. What aspect of that case study prompts you to consider potentially significant changes to requirements in the future?
+A. Dealers will want more reports about their customers.
+B. Of 20 million pieces of equipment, only 200,000 have cellular connections; 19,800,000 additional pieces of equipment may someday transmit data in real time instead of downloading it in batches.
+C. TerramEarth is in a competitive industry.
+D. TerramEarth would like to partner with other companies to improve overall service to their customers.
+13. B. The correct answer is B. A significant increase in the use of streaming input will require changes to how data is ingested and require scalable ingestion services. An increase of almost two orders of magnitude in the number of pieces of equipment transmitting data will likely require architectural changes. Option A is incorrect, as additional reporting is easily accommodated. Option C is incorrect because the initial design will take into account that TerramEarth is in a competitive industry. Option D is incorrect, as collaborating with other companies will not require significant changes in systems design.
+
+Mountkirk Games wants to store player game data in a time-series database. Which Google Cloud managed database would you recommend?
+A. Bigtable
+B. BigQuery
+C. Cloud Storage
+D. Cloud Dataproc
+14. A. The correct answer is A. Cloud Bigtable is a scalable, wide-column database designed for low-latency writes, making it a good choice for time-series data. Option B is incorrect because BigQuery is an analytic database not designed for the high volume of low-latency writes that will need to be supported. Options C and D are not managed databases.
+
+The game analytics platform for Mountkirk Games requires analysts to be able to query up to 10 TB of data. What is the best managed database solution for this requirement?
+A. Cloud Spanner
+B. BigQuery
+C. Cloud Storage
+D. Cloud Dataprep
+15. B. The correct answer is B. This is a typical use case for BigQuery, and it fits well with its capabilities as an analytic database. Option A is incorrect, as Cloud Spanner is best used for transaction processing on a global scale. Options C and D are not managed databases. Cloud Storage is an object storage service; Cloud Dataprep is a tool for preparing data for analysis.
