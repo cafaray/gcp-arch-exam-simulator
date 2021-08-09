@@ -1,0 +1,802 @@
+
+--- Basics ---
+1.	Which of the following describes a Public Cloud?
+A	A remote computer system, hosted for a company under a managed service agreement
+B	Computing resources, operated by a service provider and used by multiple tenants
+C	Computing resources, operated by a service provider and used by a single tenant only
+D	An environment of elastic compute resources, deployed behind the company firewall
+1. B.
+
+2.	A customer has told you they have a new application they want to fully deploy in the Cloud. To ensure costs are as low as possible, they are happy to use a multi-tenant environment. What do you recommend?
+A  	Deploy into a Private Cloud
+B	Deploy into a Hybrid Cloud
+C	Deploy into a Public Cloud
+D	Deploy into a muli-cloud
+2. C.
+
+3.	A customer has a new application they have developed as a mobile web app, which needs to communicate with an older 'system of record' database. The database will remain on premises, while the web app will be deployed in the public cloud. What type of cloud is this?
+A	Industry Cloud
+B	Hybrid Cloud
+C	Multi-Cloud
+D	Private Cloud
+3. B.
+
+4.	Which of the following is a driver to Private Cloud?
+A	Regulatory or Security Compliance
+B	Lowest possible cost of operation
+C	Requirement for a managed service
+E	Multi-regional application deployment
+4. A.
+
+5.	Which of the following describes a multi-cloud deployment?
+A. 	A web application hosted in Public Cloud, accessing an on-premises database
+B. 	An application composed from multiple services running in a single provider’s cloud
+C. 	An on-premises system that uses IBM Cloud Object Storage to retain backups
+D.	A system that uses services from two or more public clouds in its operation
+5. D.
+
+
+6.	Which of the following is an advantage of a multi-cloud deployment?
+A	Management of the environment is less complex
+B	Using a single cloud supplier means lower TCO thanks to economies of scale
+C	Application components are deployed with consideration to best fit to requirements
+D	Data transfer speeds are enhanced through use of multiple networks 
+6. C.
+
+--- Type of Services ---
+
+7.	A Cloud vendor provides users access to computing resources such as servers, storage and networking. What kind of cloud computing offering is this?
+A	PaaS
+B	IaaS
+C	SaaS
+D	DBaaS
+7. B.
+
+
+8.	A cloud vendor supplies the underlying infrastructure to allow users to build and deliver applications. What is this described as?
+A	Infrastructure as a Service
+B	Software as a Service
+C	Platform as a Service
+D	Computing as a Service
+8. C.
+
+9.	Which of the following is a benefit of IaaS?
+A	It allows developers to just get on and code
+B	Administrators no longer need to worry about deploying application updates
+C	Organisations are freed from the capital expense of server equipment
+D	Once a server is paid for, bills reduce to just reflect the cost of hosting
+9. C.
+
+10.	A customer has a team of software developers who have no real experience of deploying and managing hardware but want to code their next application in the cloud. What kind of cloud offering to you recommend?
+A	Software as a Service
+B	PaaS
+C	Public Cloud
+D	Private Cloud
+10. B.
+
+11.	"Users do not have to manage, install or upgrade software". Which of the following does this relate to?
+A	IaaS
+B	SaaS
+C	Bare Metal
+D	ITAR
+11. B.
+
+12.	Which of the following is a benefit of Platform as a Service?
+A	Providers manage security, operating systems, server software and backups
+B	Developers have complete control over the software versions the platform provides
+C	It provides a ready-to-use application, flexibly priced per user
+D	Administrators can quickly scale up and down hardware to meet user demand
+12. A.
+
+13.	Which of the following cloud service types offers a way for developers to rapidly test and prototype new applications?
+A	Software as a Service
+B	Platform as a Service
+C	Virtual Machine as a Service
+D	Application Programming Interface as a Service
+13. B.
+
+14.	Which of the following is an example of a Platform as a Service offering available in IBM Cloud?
+A	Bare Metal servers
+B	Virtual Private Cloud
+C	Cloud Foundry
+D	Schematics
+14. C.
+
+
+15.	A user has just signed up for IBM Cloud at cloud.ibm.com. What type of account do they have by default?
+A	Lite
+B	Free
+C	PAYGO
+D	On-demand
+15. A.
+
+16.	Which type of IBM Cloud account provides discounted costs?
+A	Pay as You Go
+B	Premium
+C	Enterprise Plus
+D	Subscription
+16. D.
+
+17.	A customer has told you that their service instance appears to have been deleted. After asking them a few questions, you’ve discovered that they have not performed any development activity on that service instance for at least a month. What do you think is the likely cause of the instance being deleted?
+A	The customer has accidentally deleted the service themselves
+B	The customer has been using a Lite service plan
+C	The service has been updated by IBM Cloud and older services therefore deleted
+D	 A quota limit was exceeded, so IBM Cloud automatically deleted services to free up resources.
+17. B.
+
+18.	A customer wants to run their production workloads in IBM Cloud but doesn’t want to have a long-term commitment or contract. What type of IBM Cloud account would you recommend to this customer?
+A	Enterprise Account
+B	Subscription Account
+C	Pay-as-you-go Account
+D	Freedom Account
+18. C.
+
+--- Storage ---
+
+19.	Which of the following is a feature of File Storage on IBM Cloud?
+A	Automatic archiving to different storage tiers
+B	Encryption for data at rest
+C	A maximum file share size of 10 TB
+D	Per megabyte (MB) pricing
+19. B.
+
+20.	Which TWO of the following are options for File Storage on IBM Cloud?
+A	Endurance
+B	Standard
+C	Cross-Region
+D	Performance
+E	Auto-replicate
+20 A, D.
+
+21.	What is the smallest File Storage volume size that can be created in IBM Cloud?
+A	2 GB
+B	20 GB
+C	200 GB
+D	2 TB
+21. B.
+
+22.	What is the largest File Storage volume size that can be created in IBM Cloud?
+A	12 GB
+B	1.2 TB
+C	12 TB
+D	1.2 PB
+22. C.
+
+23.	Which of the following statements describes IBM Cloud File Storage?
+A	It is network-attached, NFS-based storage
+B	It is direct attached, in chassis storage
+C	It is unattached, api connected storage
+D	It is LUN attached, iSCSI-based storage
+23. A.
+
+24.	What is the maximum number of devices an IBM Cloud File Storage share can be connected to?
+A	32
+B	64
+C	128
+D	248
+24. B.
+
+25.	IBM Cloud File Storage provides a Snapshot facility. What might these be used for?
+A	To provide an auditing facility for changes to used disk capacity
+B	To reconstruct the disk content on premises
+C	To replicate the disk to IBM Cloud Object Storage
+D	To recover files which may have been accidentally deleted
+25. D.
+
+--- Cloud Pack Integration ---
+
+26.	Which free service in IBM Cloud allows developers to create, share, secure and manage APIs that access IBM Cloud Resources?
+A.	API Connect
+B.	App Connect
+C.	API Gateway
+D.	App ID
+26. C.
+
+27.	A developer has noticed that a particular application is making hundreds of calls per second to an API they have developed. This is placing the API under strain and it is sometimes unable to respond to calls coming from other, more important, applications. Which feature of API Gateway would help control this?
+A.	API Analytics
+B.	OAuth
+C.	Rate Limiting
+D.	Cross-Origin Resource Sharing (CORS)
+27. C.
+
+28.	What are TWO methods by which an API can be secured under API Gateway?
+A.	Additional code to request a username / password
+B.	Through the use of permissions on Cloud Foundry spaces
+C.	Under IAM by creating Cloud Functions APIs in resource groups
+D.	Use IBMid Identity Federation to determine provider managed access
+E.	Use the API Gateway Encryption Key Lock feature
+28. B, C.
+
+29.	Which of the following statistics will the API Analytics feature of API Gateway provide?
+A.	The last 100 responses
+B.	The number of API calls per month
+C.	The compute resources consumed by each API call
+D.	IP addresses that could be the source of DDoS attacks
+29. A.
+
+30.	Which of the following statements is true about API Connect?
+A.	It is used to create APIs and microservices based on Node.js and Java runtimes
+B.	It is used to create APIs and microservices based on iOS and Android runtimes
+C.	It is used to create APIs and microservices based on Ruby and Spark runtimes
+D.	It is used to create APIs and microservices based on .Net and MQ runtimes
+30. A.
+
+31.	Which service in IBM Cloud provides tools to view insights into API usage through detailed analytics?
+A.	Cloud Pak for Integration
+B.	API Connect
+C.	Watson API Workbench
+D.	App Connect
+31. B.
+
+32.	Using API Connect, what kind of API definitions can be imported?
+A.	SwiggleAPI
+B.	LoopBackAPI
+C.	OpenAPI
+D.	StarAPI
+32. C.
+
+33.	You’re in a meeting with an API developer and they have asked you if there are any services available in IBM Cloud that can help them manage security, rate limits, policies and billing information. You direct the conversation towards API Connect. Which feature of API Connect provides this ability?
+A.	Product Manager
+B.	Plan Manager
+C.	API Manager
+D.	Gateway Manager
+33. C.
+
+34.	Under API Connect, which of the following is a true statement about Plans?
+A.	Plans are made up of one or more Products
+B.	Plans can be created outside of Products
+C.	Plans can share APIs
+D.	Plans can be directly published into a Catalog
+34. C.
+
+35.	You have been explaining the Catalog feature of API Connect to a customer. What are the three different catalog settings that are available?
+A.	Sandbox, Test, Production
+B.	Personal, Workgroup All, Enterprise Open
+C.	Private, Public Shared, Public Restricted
+D.	Development, Automatic Subscription, Default
+35. D.
+
+36.	Which service in IBM Cloud can be used to integrate cloud based or on-premises applications to automate tedious and repetitive tasks?
+A.	API Gateway
+B.	API Connect
+C.	Message Queues
+D.	App Connect
+36. D.
+
+37.	Which TWO types of flow can be created using App Connect?
+A.	Event-driven
+B.	Response-driven
+C.	API
+D.	I/O
+E.	UserInit
+37. A,C.
+
+38.	What are 'applications' in relation to App Connect?
+A.	The Cloud based software applications that are being connected
+B.	A group of flows which have been published in a catalog
+C.	Application Interfaces that are custom written by the Connection Administrator
+D.	A core component of data mapping that dictates information flow
+38. A.
+
+39.	What is the name of the IBM Cloud service that is a high-throughput message bus built with Apache Kafka?
+A.	Messages for RabbitMQ
+B.	Event Streams
+C.	IBM Enterprise Service Bus
+D.	API Connect
+39. B.
+
+40.	You are having a discussion with a client about Event Streams. Which of the following might you mention?
+A.	In Event Streams, applications send data by creating a message and sending it to a topic.
+B.	Messages in Event Streams are sent in a random order
+C.	Event Streams is built on Apache CouchDB
+D.	Event data can only be published to one application at a time
+40. A.
+
+41.	A client has asked you about options for running IBM MQ. You tell them that as well as an IBM Cloud service, it can also be deployed elsewhere. Which one of the following is a deployment option for IBM MQ?
+A.	Microsoft Azure
+B.	Cloud Foundry
+C.	IBM z/OS mainframe
+D.	Messages for IBMMQ
+41. C.
+
+42.	A customer has an application that generates thousands of transactions a minute. Many of which need to be processed by other applications. However, these applications cannot cope with such a high throughput of transactions and some are at risk of getting lost. What do you suggest?
+A.	Use API Gateway to throttle transactions to a manageable rate from the users
+B.	Increase the network bandwidth between the applications to speed up processing
+C.	Implement IBM MQ to set up message queues that can be processed at a flat rate
+D.	Follow 12Factor application advice so that users are prompted to retry lost transactions
+42. C.
+
+43.	Data is sent to the Watson IoT Platform using which protocol?
+A.	RDP
+B.	sFTP
+C.	MQTT
+D.	SSH
+43. C.
+
+44.	Which of the following statements describes the Watson IoT Platform?
+A.	It provides a user-friendly graphical interface for connecting application APIs together
+B.	It allows you to communicate with and consume data sent from remote connected devices and gateways 
+C.	It is a service a developer can use to compose applications by dragging and dropping nodes into a work area and connecting them
+D.	The service enables users to compose intelligent bots which can answer questions posed by users in natural language
+44. B.
+
+45.	A customer has asked you to provide a short description of the Internet of Things. Which of the following might be your response?
+A.	It’s a trunked private network link over the internet that connects the resources of an application in the cloud to a remote customer data centre
+B.	It’s a set of connected sensors which send data via the internet to the cloud where it is processed for real-time decisions
+C.	It’s a strategy whereby an enterprise consumes resources from multiple cloud providers enabling a highly connected application, drawn from best-of-breed components
+D.	It’s an IBM technology that provides a means to queue and transmit messages between hyper-connected resources for real-time or near real-time processing
+45. B.
+
+46.	A customer in the Agriculture sector has deployed electronic sensors in their fields that are able to detect moisture levels in the soil. The customer is excited because they see that it might be possible to collect data from the sensors and make better and faster decisions around crop irrigation. Which IBM Cloud service do you talk about next to develop the idea?
+A.	IBM MQ
+B.	API Gateway
+C.	Mobile Foundation
+D.	Watson IoT Platform
+46. D.
+
+47.	Which of the following services in IBM Cloud enables developers to quickly build and deploy digital applications targeted at mobile and wearable devices?
+A.	Watson IoT Platform
+B.	IBM Mobile Foundation
+C.	Push Notifications
+D.	Cloud Foundry for MobileDevs
+47. B.
+
+48.	IBM Mobile Foundation allows you to conduct A/B Testing of apps. What does this mean?
+A.	Two versions of an application are deployed at once. A/B testing determines which version is most effective at driving specific outcomes, such as sales conversions, supported by Mobile Foundation’s analytics features
+B.	Two versions of an application are deployed in succession. A/B testing gathers feedback from users on which version they preferred via simple questionnaires built into the app by Mobile Foundation
+C.	Mobile Foundation is integrated with IBM Marketing Insights, which allows the testing of applications with users segmented by socio-economic groups. Those groups are typically named A, B, C1, C2 and so on
+D.	Mobile Foundation is easily integrated with multiple backend runtimes. If a user is struggling to engage with an application, the Engagement module will detect this and automatically switch the user to an alternate back end. 
+48. A.
+
+49.	A customer has a requirement to send messages to users of their mobile and web application. They’ve gone on to say that they’d like to be able to send these messages to a targeted subset of users, as well as having the ability to personalise them. What service on IBM Cloud do you recommend?
+A.	IBM Message Queues
+B.	IBM Mobile Foundation
+C.	Push Notifications
+D.	API Connect
+49. C.
+
+50.	A developer has told you that they need to secure a mobile web application that they have written for their organization so that it allows access to authorised users only, using credentials such as their email address and a password. Which IBM Cloud delivers this capability?
+A.	IBMid Federated Services
+B.	IBM Mobile Foundation
+C.	Secure Gateway
+D.	AppID
+50. D.
+
+51.	“It is a shared, immutable ledger for recording transactions and tracking assets”. Which of the following does this sentence apply to?
+A.	The Internet of Things
+B.	Platform as a Service
+C.	Containeriztion
+D.	Blockchain
+51. D.
+
+52.	What does the data in the ‘blocks’ of Blockchain represent?
+A.	Anything of value
+B.	Functions that carry out acts
+C.	Individual cryptocurrency types
+D.	Ledger network links
+52. A.
+
+53.	Which of the following describes a Smart Contract in relation to Blockchain?
+A.	A set of rules stored in the blockchain and automatically executed
+B.	It is one of the IBM Blockchain service tiers, the others being Standard and Enterprise
+C.	They are immutable ledgers which are then distributed
+D.	It is a traceable part of the overall supply chain, recorded in physical legal documents
+53. A.
+
+54.	One of the advantages of Blockchain is that it can speed up overall transaction times by automatically enforcing conditions such as terms for travel insurance payments or conditions for corporate bond transfers. What aspect of Blockchain provides this important functionality? 
+A.	The Distributed Ledger
+B.	Smart Contracts
+C.	Immutable Ledgers
+D.	Traceable Supply Chain
+54. B.
+
+55.	Which of the following characteristic of Blockchain derives business value?
+A.	A permissioned blockchain used for business transactions ensures that transactions are non-transparent and hidden from other companies
+B.	All transactions are stored in chronological order, connected by an immutable chain, so none can be tampered with or changed, allowing businesses to track the full supply chain
+C.	If a transaction needs to be changed, it can be easily erased and re-written, saving hours in administration overheads
+D.	Blockchains are always maintained by a single organisation, which means their set up and delivery is controlled centrally which leads to increased trust between businesses
+55. B.
+
+56.	Which of the following statements describes DevOps?
+A.	An approach to database design, used more commonly with NoSQL databases, that increases the speed at which schema design is achieved by collaboration with developers and operators
+B.	An approach to software delivery that development and operations teams use to build, test, deploy and monitor applications with speed, quality and control
+C.	The defined process by which developers hand off operational support to the IBM Cloud helpdesk, including the creation of runtime manuals that can be used to speed up ticket resolution
+D.	The defined process that allows developers to transition their software into operational modules of code, that allows deployment in a multi-cloud environment without the need to recompile across clouds
+56. B.
+
+57.	An organisation that you have been talking to has complained about the fact that there is a complete disconnect between code developers and the ‘busines as usual’ operations staff which is causing problems when releasing new applications or code updates into different environments, including production. In fact, last week, there was a serious outage caused by the two groups not communicating well, leading to the release failing. What do you suggest?
+A.	Ask developers to package up their releases so that there are at most one per quarter and provide rigorous documentation for the operations staff to avoid deployment issues
+B.	Ensure that there is a larger-than-needed maintenance window in place so that the deployment can be tested thoroughly by the test team as part of the release
+C.	Have the developers and operations teams work together and develop automated toolchains that can help speed up the build, test and deployment process
+D.	Suggest that the customer switches away from self-written code and instead focusses on services which are provided by IBM Cloud such as Cloud Foundry and OpenShift
+57. C.
+
+58.	Select TWO benefits of implementing DevOps
+A.	Faster time to market
+B.	Complete segregation between development and operations staff
+C.	The roll-up of code into larger, less frequent releases means more new features for users
+D.	A decrease in time in resolution for fixing bugs and vulnerabilities
+E.	Slower code delivery means it is more controlled and less likely to have bugs
+58. A,D.
+
+59.	Releasing new applications or application updates more regularly with better quality is one of the true benefits of DevOps. What is this DevOps process often referred to?
+A.	Software Testing
+B.	Application Performance Management
+C.	Toolchain Lifecycle
+D.	Continuous Delivery
+59. D.
+
+60.	With reference to DevOps, what does ‘continuous integration’ set out to achieve?
+A.	Ensures the application environment can still connect to relevant service APIs in IBM Cloud
+B.	Keeps the code of an individual developer from drifting too far afield from the work of the development group as a whole
+C.	Stops the introduction of bugs into the code from malicious sources by constantly and automatically checking the git repository
+D.	Recompiles code automatically when connected services, such as databases or object storage are updated by IBM Cloud
+60. B.
+
+61.	What will help when it comes to implementing continuous delivery as part of a DevOps strategy?
+A.	Provide user documentation, operations runbooks and change information at a later time, so developers can concentrate on writing and delivering code more quickly
+B.	Use an automated delivery pipeline to ensure all code releases move into test and production environments in a consistent way
+C.	Test and release all parts of an application separately to ensure that the smallest unit of code as possible is being released, especially where those parts work together
+D.	Use ‘pair programming’ to enable developers to read through each other’s code each day avoid coding bugs
+61. B.
+
+62.	An organisation wants to automate releases as part of their DevOps processes. What DevOps methodology does this refer to?
+A.	Continuous deployment
+B.	Continuous delivery
+C.	Continuous integration
+D.	Continuous toolchain
+62. A.
+
+--- COMPUTE ---
+
+63.	What are virtual servers also known as when running in the Power Systems Virtual Servers service?
+A.	A Virtual Server Instance (VSI)
+B.	Logical Partition (LPAR)
+C.	pSeries Server (PSS)
+D.	AIX Machine (AIXM)
+63. B.
+
+64.	A customer has a number of back-end processing systems that run exclusively on AIX and IBM i operating systems. They are looking at an on-premises hardware refresh but are looking at ‘all options’ and are interested in possibilities around cloud computing. Which IBM Cloud service would you introduce to the conversation?
+A.	Bare Metal Servers on Classic Infrastructure
+B.	Virtual Private Cloud
+C.	VMware Solutions Dedicated – vCenter Server
+D.	IBM Power Systems Virtual Servers
+64. D.
+
+65.	Which of the following statements describes a Transient virtual server?
+A.	A single tenant virtual server that can be easily transitioned between global data centres
+B.	A virtual machine that guarantees resources for future deployments
+C.	A virtual server instance that can be provisioned when there is unused capacity available
+D.	A multi-tenant virtual machine with processing pricing that varies, depending on the time of day
+65. C.
+
+66.	A customer wishes to run a workload on virtual servers but is concerned about security and using shared infrastructure. Which IBM Virtual Server offering do you talk to them about?
+A.	Transient Virtual Servers
+B.	Dedicated Virtual Servers
+C.	Reserved Virtual Servers
+D.	Virtual Server Instances on VPC
+66. B.
+
+67.	What are the available contract lengths for Reserved Virtual Servers?
+A.	1 or 3 years
+B.	1, 2 or 3 years
+C.	3 or 5 years
+D.	2 or 4 years
+67. A.
+
+68.	A customer needs to guarantee capacity within a POD in a particular data center for at least the next few years. How large a set of virtual server instances of a specified size can be reserved when opting for Reserved virtual servers?
+A.	20
+B.	30
+C.	50
+D.	75
+68. A.
+
+69.	Which offering brings IBM Z capabilities to the IBM Cloud?
+A.	Power Systems Virtual Servers
+B.	Bare Metal Servers
+C.	VMware Solutions Shared
+D.	Hyper Protect Virtual Servers
+69. D.
+
+70.	For which of the following is the user responsible in relation to Hyper Protect Virtual Servers?
+A.	Maintaining OS patches, version updates and security updates
+B.	Updating and maintaining the OS kernel and its settings
+C.	Enabling security features, such as encrypted disk
+D.	Monitoring stock images to detect vulnerabilities
+70. B.
+
+71.	Which of the following provides fully dedicated, single tenancy servers with 20TB of bandwidth in IBM Cloud?
+A.	Virtual Servers Reserved
+B.	Hyper Protect Virtual Servers
+C.	Bare Metal Servers
+D.	Virtual Server Instances on VPC Gen 2
+71. C.
+
+72.	What is RAID?
+A.	A service which enables the rapid redeployment of applications in the event of a bare metal server failure
+B.	An application security method which is used to check logins against a federated ID service
+C.	A means of mirroring or striping data across disks to prevent data loss in the event of disk failure
+D.	A penetration testing application available from the IBM Cloud catalog, that can find vulnerabilities in user developed software
+72. C.
+
+73.	A customer is asking about Bare Metal servers. What might the conversation cover?
+A.	They are provided without a hypervisor installed
+B.	They are dedicated and can be taken on 1 or 3 year contracts
+C.	They come with 20GB network bandwidth
+D.	They come with monthly billing only
+73. A.
+
+74.	How are Transient virtual servers billed?
+A.	By the second
+B.	By the minute
+C.	By the hour
+D.	By the month
+74. C.
+
+75.	Which service on IBM Cloud enables the user to deploy containerized workloads?
+A.	Kubernetes Service
+B.	Container Registry
+C.	Docker Clusters
+D.	OpenStack
+75. A.
+
+76.	What is a Kubernetes Cluster?
+A.	A set of compute hosts onto which an instance of Kubernetes is installed
+B.	The pods that run within worker nodes and support Kubernetes containers
+C.	The collective term for the underlying Kubernetes software, that includes Docker, Helm and Spyglass
+D.	Two or more Kubernetes systems located in separate locations that have been connected for resilience
+76. A.
+
+77.	You are having a meeting with a customer and they have told you that they want to develop containerised applications. What IBM Cloud service do you talk to them about? 
+A.	Cloud Foundry
+B.	VPC
+C.	Kubernetes
+D.	OpenStack
+77. C.
+
+78.	A developer has been asked by a client to talk about the benefits of the IBM Cloud Kubernetes Service. Which of the following would they talk about?
+A.	Multi-tenant cluster instances can be provisioned for customers with development workloads that are cost sensitive
+B.	To increase high availability, multi-zone clusters can easily be provisioned
+C.	The service is based on fully supported, IBM licensed technology
+D.	While other IBM Cloud services cannot be integrated, you can create those services to run within your cluster
+78. B.
+
+79.	A customer has deployed a multizone Kubernetes cluster. What is a Multizone cluster?
+A.	A cluster with multiple worker nodes all hosted in a single IBM Cloud data center
+B.	A cluster with multiple worker nodes spread across different zones in a single region
+C.	A cluster with multiple master nodes spread across zones in different regions
+D.	A cluster with multiple master nodes spread across at least two clouds
+79. B.
+
+80.	Due to compliance, a company has a containerised application that must run in specific single zone location. Which of the following is a means to protect workloads against cluster failure when using a single zone Kubernetes cluster?
+A.	Add additional worker nodes and connect them with a load balancer
+B.	Create multiple master nodes and connect them with a load balancer
+C.	Create multiple clusters and connect them with a global load balancer
+D.	Ensure that the cluster is running on VPC
+80. C.
+
+81.	A company wants to protect their containerised workloads against the failure of a single data center, when using the IBM Cloud Kubernetes Service. How can they protect against this?
+A.	Use multiple clusters in a single zone and connect them with a global load balancer
+B.	Create a multizone cluster and distribute workloads across multiple workers
+C.	Ensure that the service distributes pods evenly across all master nodes
+D.	Configure the automatic zone disaster recovery capability of Zerto into the cluster
+81. B.
+
+82.	Which TWO of the following options are key advantages of using the IKS service on IBM Cloud?
+A.	Rapid deployment
+B.	Full access to underlying hardware
+C.	Bring Your Own Kubernetes Licensing
+D.	A fully managed environment
+E.	Support for Microsoft Windows-based containers
+82. A,D
+
+83.	Which operating system underpins OpenShift clusters on IBM Cloud?
+A.	Microsoft Windows Server 
+B.	Ubuntu Linux for Enterprise Servers
+C.	Red Hat Enterprise Linux
+D.	IBM AIX
+83. C.
+
+84.	Which Red Hat Openshift on IBM Cloud deployment option provides the security of a private cloud with the scalability of a public cloud?
+A.	A VPC cluster
+B.	A Bare Metal cluster
+C.	A Classic virtual machine cluster
+D.	A VMware-based cluster
+84. A.
+
+85.	Which of the following is an advantage of Red Hat OpenShift on IBM Cloud?
+A.	The customer maintains full control over the underlying hardware and operating system
+B.	It is possible to downgrade as well as upgrade the version of OpenShift through the console
+C.	The service provides a fully managed environment, allowing the user to concentrate on deploying and managing applications
+D.	The service is only deployed on dedicated Bare Metal Servers, providing enhanced security and separation from other users
+85. C.
+
+86.	How do multizone Red Hat Open Shift Clusters increase High Availability?
+A.	They guard against the failure of pods
+B.	They guard against the failure of code within containers
+C.	They guard against the failure of entire regions
+D.	They guard against the failure of data centres
+86. D.
+
+87.	A user is provisioning a multizone Red Hat OpenShift Cluster on IBM Cloud, in a region with three zones. They have specified 3 worker nodes when ordering the service but when the cluster is created, they see 9 worker nodes. Why?
+A.	There has been an error in the provisioning of the cluster
+B.	When ordering the cluster, the number of worker nodes specified is per zone
+C.	On provisioning, additional nodes are provided but not charged for, in case of failure
+D.	The additional nodes belong to the different clusters in the multizone
+87. B.
+
+88.	What is the charging model for Red Hat OpenShift Clusters when deployed on VPC?
+A.	By the second
+B.	By the minute
+C.	Hourly
+D.	Monthly
+88. C.
+
+89.	Which TWO of the following are deployment options for Red Hat OpenShift on IBM Cloud clusters?
+A.	Bare Metal Shared
+B.	Virtual Dedicated
+C.	Virtual Transient
+D.	Virtual Shared
+E.	Virtual Reserved
+89. B,D
+
+90.	A customer has a workload they wish to run on Red Hat OpenShift on IBM Cloud. The nature of the workload means that it must run in one particular data center. What kind of cluster deployment should they opt for?
+A.	Region-Dedicated
+B.	Multi-zone
+C.	DC-Dedicated
+D.	Single Zone
+90. D.
+
+91.	A customer is designing their deployment of Red Hat OpenShift on IBM Cloud. They have decided that while their workloads must be secure, they do not process or store any sensitive data. They are looking for the most cost-effective option for deployment. How should they deploy their cluster?
+A.	Use bare metal servers
+B.	Use Virtual Transient servers
+C.	Use Virtual Dedicated servers
+D.	Use Virtual Shared servers
+91. D.
+
+92.	Which of the following monitoring tools are built into Red Hat OpenShift on IBM Cloud?
+A.	Prometheus and Grafana
+B.	Log Analysis with LogDNA
+C.	IBM Cloud Monitoring with Sysdig
+D.	IBM Analytics Engine
+92. A.
+
+93.	Which of the following statements describes IBM Virtual Private Cloud?
+A.	It is an environment that provides a shared instance of VMware vDirector that allows the user to create a VMware based cloud on dedicated infrastructure
+B.	It is a stack of dedicated virtual and bare metal machines, complete with hardware firewalls and gateway devices that is fully managed by IBM Cloud
+C.	It is a secure, isolated virtual network that combines the security of a private cloud with the availability and scalability of IBM’s public cloud
+D.	It is a service offering which provides dedicated network links between a customers on-prem environment and IBM Cloud, to create a single, dedicated cloud
+93. C.
+
+94.	Which of the following is a distinct different between VPC Gen1 and VPC Gen2?
+A.	Gen1 has a 20-character limit on the VPC name, whereas the Gen2 limit is 256 characters 
+B.	Gen 1 has a hard limit of 50 on the number of VSIs that can be added to a subnet
+C.	Gen 2 has improved network performance of up 80Gbps on its virtual server instances
+D.	Gen 2 provides physical hardware load balancers
+94. C.
+
+95.	How many zones are available to each VPC?
+A.	1
+B.	3
+C.	5
+D.	10
+95. B.
+
+96.	What is the job of an Access Control List (ACL) in IBM Vitual Private Cloud?
+A.	It specifies which users in the IBM Cloud account can work with resources in the VPC
+B.	It is used to allow network traffic to reach virtual server instances in the VPC
+C.	It provides a user authentication service to manage usernames an passwords for applications
+D.	It is configured to allow or deny network traffic into and out of subnets
+96. D.
+
+97.	What is the job of a Security Group in IBM Virtual Private Cloud?
+A.	It specifies which users in the IBM Cloud account can work with resources in the VPC
+B.	It is used to allow network traffic to reach virtual server instances in the VPC
+C.	It provides a user authentication service to manage usernames an passwords for applications
+D.	It is configured to allow or deny network traffic into and out of subnets
+97. B.
+
+98.	A virtual server instance in a VPC needs access to the internet to download operating system patches. What is required?
+A.	A floating IP address configured on the VSI
+B.	A Security Group rule that allows incoming traffic on port 22
+C.	A VPN Service to the patch server
+D.	A Public Gateway attached to the server’s subnet
+98. D.
+
+99.	Which of the following is true about VPC Gen 2?
+A.	It is possible to optionally mount Object Storage when creating VSIs
+B.	It is impossible to define your own network address prefixes
+C.	Compared to Gen1, provisioning times are much faster
+D.	Block storage volume sizes start at 1 GB
+99. C.
+
+100.	When creating a virtual server instance on IBM VPC, what are the size options for the boot volume?
+A.	20 GB, 100 GB, 500 GB
+B.	Any size between 10 GB and 2000 GB
+C.	It is fixed at 100 GB
+D.	It scales automatically with no lower or upper limit
+100. B.
+
+101.	What is the minimum and maximum size for data volumes in VPC?
+A.	1 GB to 10 TB
+B.	10 GB to 20 TB
+C.	10 GB to 2000 GB
+D.	1 TB to 50 TB
+101. C.
+
+102.	A user has attached a block storage data volume to a virtual server instance under VPC and set ‘auto delete’ on. Which of the following statements is true?
+A.	When the virtual server instance is rebooted, data on the storage will be deleted
+B.	When the virtual server instance is cancelled, the storage will be cancelled
+C.	When the storage is detached from the virtual server instance, the virtual server instance is deleted
+D.	When the storage is detached from the virtual server instance, the data on the storage is deleted
+102. B.
+
+103.	VPC Block Storage Volumes can be provisioned with either an IOPS tier profile or a custom IOPS profile. What does a customer need to consider when choosing IOPS for their storage?
+A.	IOPS determines the performance of the storage. If an application performs a lot of reads and writes from storage, a higher IOPS is recommended
+B.	IOPS directly determines the number of physical disks that will make up the volume. If the customer has lots of data, a higher IOPS is recommended
+C.	IOPS determines the backup rate for the data on the volume. The setting is trade-off between the consequence of data loss and backup costs
+D.	IOPS determines the number of users you are prepared to share the disk within a public cloud. The lower the IOPS, the less read contention there is with other users
+103. A.
+
+104.	A customer has deployed a load balanced website using IBM Virtual Private Cloud and is testing it by entering the host name of the load balancer as the site address in a browser. The website is not responding. What is the likely problem?
+A.	The load balancer has been stopped and needs restarting
+B.	The webserver(s) need to have a Floating IP address assigned to them
+C.	A Security Group rule is required that allows internet network traffic to reach the webservers
+D.	There is a problem with the VPC’s Vyatta gateway
+104. C.
+
+105.	Which of the following dedicated VMware Solutions on IBM Cloud is self-built and managed?
+A.	VMware Solutions Shared
+B.	VMware vCenter
+C.	VMware vSphere
+D.	VMware vDirector
+105. C.
+
+106.	Which of the following offerings on IBM Cloud provides a hosted private cloud as a service?
+A.	Cloud Foundry
+B.	IBM OpenStack
+C.	VMware vCenter
+D.	IBM Cloud Satellite
+106. C.
+
+107.	What is the minimum number of bare metal servers required to create a VMware vCenter service instance?
+A.	1
+B.	3
+C.	5
+D.	6
+107. B.
+
+108.	Which VMware Solutions Dedicated on IBM Cloud service has optional components that include VMware vSAN, VMware vRealize Log Insight and VMware vCentre Server Standard?
+A.	VMware vDirector
+B.	VMware vSphere
+C.	VMware vCentre
+D.	VMware ESXi
+108. B.
+
+109.	Which of the following services, available in IBM Cloud, seamlessly integrates with VMware hypervisors to achive high availability through backup and recovery of applications and data?
+A.	Tivoli NetCool
+B.	Zerto
+C.	IBM Cloud Backup
+D.	Veeam
+109. D.
+
+110.	Which of the following services provides replication and disaster recovery services for VMware virtual environments in IBM Cloud?
+A.	Tivoli NetCool
+B.	Zerto
+C.	IBM Cloud Backup
+D.	Veeam
+110. B.
+
+111.	What is vRealize on IBM Cloud?
+A.	A set of self managed tools that help customers operate and monitor the performance, health and capacity of VMware environments
+B.	A service that delivers infrastructure as code, based on Terraform, that allows users to quickly scale their server deployments
+C.	A part of the IBM CloudPak for Analytics, which pulls in data from connected data stores, creates cubes and presents results in a dashboard
+D.	An IBM Watson service that applies machine learning to a customer’s cloud usage and suggests areas where cost savings can be achieved
+111. A.
+
+112.	A customer has a VMware installation on premises and wants to migrate virtual machines from this installation to a VMware vCenter instance running in IBM Cloud. What tool could they use to achieve the migration?
+A.	vMM
+B.	vMigrate
+C.	ESXi
+D.	HCX
+112. D.
